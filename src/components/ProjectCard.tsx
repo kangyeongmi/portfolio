@@ -1,4 +1,6 @@
 import { Project } from "@/data/portfolio";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 interface ProjectCardProps {
   project: Project;
@@ -11,63 +13,57 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
   return (
     <a
       href={`#${project.id}`}
-      className="group block border border-neutral-200 rounded-xl p-6 transition-all duration-200 hover:border-neutral-400 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 active:shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900"
+      className="group block h-full transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900"
     >
-      <div className="flex items-center justify-between mb-3">
-        <span
-          className="font-mono text-[color:rgba(0,0,0,0.28)] group-hover:text-[color:rgba(0,0,0,0.4)] transition-colors"
-          style={{ fontSize: "var(--text-micro)" }}
-        >
-          {num}
-        </span>
-        <div className="flex gap-1.5 flex-wrap justify-end">
-          {project.tags.map((tag) => (
+      <Card className="h-full transition-all group-hover:shadow-[rgba(0,0,0,0.08)_0px_2px_20px_0px] border-transparent hover:border-neutral-200/60 rounded-[8px]">
+        <CardHeader className="pb-4 pt-6 px-6">
+          <div className="flex items-center justify-between mb-3">
             <span
-              key={tag}
-              className="px-2 py-0.5 bg-neutral-100/50 text-[color:rgba(0,0,0,0.56)] rounded-md font-medium border border-neutral-200/50"
-              style={{
-                fontSize: "var(--text-micro)",
-                letterSpacing: "var(--tracking-caption)",
-              }}
+              className="font-mono text-[color:rgba(0,0,0,0.28)] group-hover:text-[color:rgba(0,0,0,0.4)] transition-colors"
+              style={{ fontSize: "var(--text-micro)" }}
             >
-              {tag}
+              {num}
             </span>
-          ))}
-        </div>
-      </div>
-
-      <h3
-        className="font-bold text-[color:#1d1d1f] mb-2 group-hover:text-[color:rgba(0,0,0,0.72)] transition-colors"
-        style={{
-          fontSize: "var(--text-card)",
-          lineHeight: "var(--leading-card)",
-          letterSpacing: "var(--tracking-title)",
-        }}
-      >
-        {project.title}
-      </h3>
-
-      <p
-        className="text-[color:rgba(0,0,0,0.72)] mb-3"
-        style={{
-          fontSize: "var(--text-body)",
-          lineHeight: "var(--leading-body)",
-          letterSpacing: "var(--tracking-body)",
-        }}
-      >
-        {project.summary}
-      </p>
-
-      <p
-        className="text-[color:rgba(0,0,0,0.4)]"
-        style={{
-          fontSize: "var(--text-caption)",
-          lineHeight: "var(--leading-caption)",
-          letterSpacing: "var(--tracking-caption)",
-        }}
-      >
-        {project.tmapRelevance}
-      </p>
+            <div className="flex gap-2 flex-wrap justify-end">
+              {project.tags.map((tag) => (
+                <Badge key={tag} variant="secondary" className="text-xs font-normal px-2.5 py-1 rounded-[5px] bg-[#f5f5f7] border-none">
+                  {tag}
+                </Badge>
+              ))}
+            </div>
+          </div>
+          <CardTitle
+            className="group-hover:text-[color:rgba(0,0,0,0.72)] transition-colors leading-tight"
+            style={{
+              fontSize: "var(--text-card)",
+              letterSpacing: "var(--tracking-title)",
+            }}
+          >
+            {project.title}
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="flex flex-col gap-4 px-6 pb-6">
+          <div
+            className="text-[color:rgba(0,0,0,0.72)]"
+            style={{
+              fontSize: "var(--text-body)",
+              lineHeight: "var(--leading-body)",
+              letterSpacing: "var(--tracking-body)",
+            }}
+          >
+            {project.summary}
+          </div>
+          <p
+            className="text-[color:rgba(0,0,0,0.4)] leading-snug"
+            style={{
+              fontSize: "var(--text-caption)",
+              letterSpacing: "var(--tracking-caption)",
+            }}
+          >
+            {project.tmapRelevance}
+          </p>
+        </CardContent>
+      </Card>
     </a>
   );
 }

@@ -3,6 +3,8 @@ import ProjectCard from "@/components/ProjectCard";
 import ProjectSection from "@/components/ProjectSection";
 import RecruiterSummary from "@/components/RecruiterSummary";
 import ProjectNav from "@/components/ProjectNav";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 export default function Home() {
   const { hero, recruiterSummary, projects, honestNote, contact } =
@@ -34,33 +36,34 @@ export default function Home() {
         >
           {hero.subHeadline}
         </p>
-        <ul className="flex flex-wrap gap-2 mb-4">
+        <ul className="flex flex-wrap gap-2.5 mb-5">
           {hero.strengths.map((s) => (
-            <li
+            <Badge
               key={s}
-              className="px-3 py-1.5 bg-neutral-100 text-[color:rgba(0,0,0,0.56)] rounded-full font-medium"
+              variant="secondary"
+              className="px-4 py-2 rounded-full font-medium text-[color:rgba(0,0,0,0.56)] bg-[#f5f5f7] hover:bg-neutral-200 transition-colors border-none"
               style={{
                 fontSize: "var(--text-caption)",
-                lineHeight: "var(--leading-caption)",
                 letterSpacing: "var(--tracking-caption)",
               }}
             >
               {s}
-            </li>
+            </Badge>
           ))}
         </ul>
         <div className="flex flex-wrap gap-2">
           {hero.tools.map((t) => (
-            <span
+            <Badge
               key={t}
-              className="px-2 py-1 border border-neutral-200 text-[color:rgba(0,0,0,0.4)] rounded"
+              variant="outline"
+              className="px-3 py-1.5 text-[color:rgba(0,0,0,0.48)] font-normal border-neutral-200/60 rounded-full"
               style={{
                 fontSize: "var(--text-micro)",
                 letterSpacing: "var(--tracking-caption)",
               }}
             >
               {t}
-            </span>
+            </Badge>
           ))}
         </div>
       </section>
@@ -108,7 +111,7 @@ export default function Home() {
         >
           Projects
         </h2>
-        <div className="grid gap-4">
+        <div className="grid gap-5">
           {projects.map((project, i) => (
             <ProjectCard key={project.id} project={project} index={i} />
           ))}
@@ -147,26 +150,28 @@ export default function Home() {
                   ? value
                   : "#"
               }
-              className="group block border border-neutral-200 rounded-xl p-5 transition-all duration-200 hover:border-neutral-400 hover:shadow-sm"
+              className="group block outline-none focus-visible:ring-2 focus-visible:ring-neutral-900 rounded-xl"
             >
-              <div
-                className="text-[color:rgba(0,0,0,0.4)] font-semibold uppercase mb-1"
-                style={{
-                  fontSize: "var(--text-micro)",
-                  letterSpacing: "var(--tracking-caption)",
-                }}
-              >
-                {key}
-              </div>
-              <div
-                className="text-[color:rgba(0,0,0,0.72)] font-medium group-hover:text-[color:#1d1d1f] transition-colors"
-                style={{
-                  fontSize: "var(--text-body)",
-                  lineHeight: "var(--leading-body)",
-                }}
-              >
-                {value}
-              </div>
+              <Card className="p-5 transition-all duration-200 group-hover:border-neutral-400 group-hover:shadow-sm">
+                <div
+                  className="text-[color:rgba(0,0,0,0.4)] font-semibold uppercase mb-1"
+                  style={{
+                    fontSize: "var(--text-micro)",
+                    letterSpacing: "var(--tracking-caption)",
+                  }}
+                >
+                  {key}
+                </div>
+                <div
+                  className="text-[color:rgba(0,0,0,0.72)] font-medium group-hover:text-[color:#1d1d1f] transition-colors"
+                  style={{
+                    fontSize: "var(--text-body)",
+                    lineHeight: "var(--leading-body)",
+                  }}
+                >
+                  {value}
+                </div>
+              </Card>
             </a>
           ))}
         </div>
