@@ -7,7 +7,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 export default function Home() {
-  const { hero, recruiterSummary, projects, honestNote, contact } =
+  const { hero, recruiterSummary, projects, contact } =
     portfolioData;
 
   return (
@@ -16,8 +16,15 @@ export default function Home() {
       <main className="max-w-[720px] mx-auto px-6 py-20 md:py-28">
       {/* ─── Hero ─── */}
       <section className="mb-24 animate-fade-in-up">
+        <div className="mb-8">
+          <img
+            src="/images/portfolio/profile.jpg"
+            alt="강영미 프로필"
+            className="w-28 h-28 rounded-full object-cover shadow-sm border border-neutral-100"
+          />
+        </div>
         <h1
-          className="font-bold text-[color:#1d1d1f] mb-6"
+          className="font-bold text-slate-900 mb-6"
           style={{
             fontSize: "var(--text-hero)",
             lineHeight: "var(--leading-hero)",
@@ -27,7 +34,7 @@ export default function Home() {
           {hero.headline}
         </h1>
         <p
-          className="text-[color:rgba(0,0,0,0.72)] mb-8"
+          className="text-slate-600 mb-8"
           style={{
             fontSize: "clamp(1rem, 1.5vw, 1.125rem)",
             lineHeight: 1.65,
@@ -41,7 +48,7 @@ export default function Home() {
             <Badge
               key={s}
               variant="secondary"
-              className="px-4 py-2 rounded-full font-medium text-[color:rgba(0,0,0,0.56)] bg-[#f5f5f7] hover:bg-neutral-200 transition-colors border-none"
+              className="px-2.5 py-2 rounded-[6px] font-medium text-slate-500 bg-slate-100 hover:bg-slate-200 transition-colors border-none"
               style={{
                 fontSize: "var(--text-caption)",
                 letterSpacing: "var(--tracking-caption)",
@@ -56,7 +63,7 @@ export default function Home() {
             <Badge
               key={t}
               variant="outline"
-              className="px-3 py-1.5 text-[color:rgba(0,0,0,0.48)] font-normal border-neutral-200/60 rounded-full"
+              className="px-2.5 py-2 text-slate-400 font-normal border-slate-200 rounded-[6px]"
               style={{
                 fontSize: "var(--text-micro)",
                 letterSpacing: "var(--tracking-caption)",
@@ -71,38 +78,22 @@ export default function Home() {
       {/* ─── Recruiter Summary ─── */}
       <section className="mb-24 animate-fade-in-up delay-100">
         <h2
-          className="font-bold text-[color:#1d1d1f] mb-8"
+          className="font-bold text-slate-900 mb-8"
           style={{
             fontSize: "var(--text-section)",
             lineHeight: "var(--leading-section)",
             letterSpacing: "var(--tracking-title)",
           }}
         >
-          주요 역량 요약
+          기본 역량
         </h2>
         <RecruiterSummary items={recruiterSummary} />
       </section>
 
-      {/* ─── Honest Transition Note ─── */}
-      <section className="mb-24 animate-fade-in-up delay-200">
-        <div className="border-l-2 border-neutral-300 pl-5 py-1">
-          <p
-            className="text-[color:rgba(0,0,0,0.56)]"
-            style={{
-              fontSize: "var(--text-body)",
-              lineHeight: "var(--leading-body)",
-              letterSpacing: "var(--tracking-body)",
-            }}
-          >
-            {honestNote}
-          </p>
-        </div>
-      </section>
-
       {/* ─── Selected Projects (Cards) ─── */}
-      <section className="mb-24 animate-fade-in-up delay-300">
+      <section className="mb-24 animate-fade-in-up delay-200">
         <h2
-          className="font-bold text-[color:#1d1d1f] mb-8"
+          className="font-bold text-slate-900 mb-8"
           style={{
             fontSize: "var(--text-section)",
             lineHeight: "var(--leading-section)",
@@ -128,9 +119,9 @@ export default function Home() {
       </section>
 
       {/* ─── Contact ─── */}
-      <section className="border-t border-neutral-200 pt-16 pb-20">
+      <section className="border-t border-slate-200 pt-16 pb-20">
         <h2
-          className="font-bold text-[color:#1d1d1f] mb-8"
+          className="font-bold text-slate-900 mb-8"
           style={{
             fontSize: "var(--text-section)",
             lineHeight: "var(--leading-section)",
@@ -140,7 +131,7 @@ export default function Home() {
           Contact
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {Object.entries(contact).map(([key, value]) => (
+          {Object.entries(contact).filter(([key]) => key !== "figma").map(([key, value]) => (
             <a
               key={key}
               href={
@@ -152,9 +143,9 @@ export default function Home() {
               }
               className="group block outline-none focus-visible:ring-2 focus-visible:ring-neutral-900 rounded-xl"
             >
-              <Card className="p-5 transition-all duration-200 group-hover:border-neutral-400 group-hover:shadow-sm">
+              <Card className="p-5 transition-all duration-200 border border-slate-200 shadow-none group-hover:border-slate-300 group-hover:shadow-sm">
                 <div
-                  className="text-[color:rgba(0,0,0,0.4)] font-semibold uppercase mb-1"
+                  className="text-slate-400 font-semibold uppercase mb-1"
                   style={{
                     fontSize: "var(--text-micro)",
                     letterSpacing: "var(--tracking-caption)",
@@ -163,7 +154,7 @@ export default function Home() {
                   {key}
                 </div>
                 <div
-                  className="text-[color:rgba(0,0,0,0.72)] font-medium group-hover:text-[color:#1d1d1f] transition-colors"
+                  className="text-slate-600 font-medium group-hover:text-slate-900 transition-colors"
                   style={{
                     fontSize: "var(--text-body)",
                     lineHeight: "var(--leading-body)",

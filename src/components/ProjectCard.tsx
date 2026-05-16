@@ -13,38 +13,42 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
   return (
     <a
       href={`#${project.id}`}
-      className="group block h-full transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900"
+      className="group block h-full transition-all duration-300 ease-out hover:scale-105 active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 z-0 hover:z-10"
     >
-      <Card className="h-full transition-all group-hover:shadow-[rgba(0,0,0,0.08)_0px_2px_20px_0px] border-transparent hover:border-neutral-200/60 rounded-[8px]">
-        <CardHeader className="pb-4 pt-6 px-6">
-          <div className="flex items-center justify-between mb-3">
+      <Card className="h-full transition-all duration-300 border border-slate-200 bg-white group-hover:bg-slate-50 shadow-none group-hover:shadow-lg group-hover:border-slate-300 rounded-[8px]">
+        <CardHeader className="pb-3 pt-5 px-6">
+          <div className="flex items-center gap-3">
             <span
-              className="font-mono text-[color:rgba(0,0,0,0.28)] group-hover:text-[color:rgba(0,0,0,0.4)] transition-colors"
+              className="tabular-nums font-bold text-slate-400 shrink-0 bg-slate-100 px-2 py-0.5 rounded-[6px]"
               style={{ fontSize: "var(--text-micro)" }}
             >
               {num}
             </span>
-            <div className="flex gap-2 flex-wrap justify-end">
+            <CardTitle
+              className="font-bold group-hover:text-slate-600 transition-colors leading-tight shrink-0"
+              style={{
+                fontSize: "var(--text-card)",
+                letterSpacing: "var(--tracking-title)",
+              }}
+            >
+              {project.title}
+            </CardTitle>
+            <div className="flex gap-1.5 flex-wrap justify-end ml-auto">
               {project.tags.map((tag) => (
-                <Badge key={tag} variant="secondary" className="text-xs font-normal px-2.5 py-1 rounded-[5px] bg-[#f5f5f7] border-none">
+                <Badge
+                  key={tag}
+                  variant="outline"
+                  className="text-xs font-normal px-2 py-0.5 rounded-[6px] border-slate-200 whitespace-nowrap"
+                >
                   {tag}
                 </Badge>
               ))}
             </div>
           </div>
-          <CardTitle
-            className="group-hover:text-[color:rgba(0,0,0,0.72)] transition-colors leading-tight"
-            style={{
-              fontSize: "var(--text-card)",
-              letterSpacing: "var(--tracking-title)",
-            }}
-          >
-            {project.title}
-          </CardTitle>
         </CardHeader>
-        <CardContent className="flex flex-col gap-4 px-6 pb-6">
+        <CardContent className="flex flex-col gap-3 px-6 pb-5">
           <div
-            className="text-[color:rgba(0,0,0,0.72)]"
+            className="text-slate-600"
             style={{
               fontSize: "var(--text-body)",
               lineHeight: "var(--leading-body)",
@@ -54,7 +58,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             {project.summary}
           </div>
           <p
-            className="text-[color:rgba(0,0,0,0.4)] leading-snug"
+            className="text-slate-400 leading-snug"
             style={{
               fontSize: "var(--text-caption)",
               letterSpacing: "var(--tracking-caption)",
