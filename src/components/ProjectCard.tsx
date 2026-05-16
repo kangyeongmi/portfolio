@@ -17,23 +17,25 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
     >
       <Card className="h-full transition-all duration-300 border border-slate-200 bg-white group-hover:bg-slate-50 shadow-none group-hover:shadow-lg group-hover:border-slate-300 rounded-[8px]">
         <CardHeader className="pb-3 pt-5 px-6">
-          <div className="flex items-center gap-3">
-            <span
-              className="tabular-nums font-bold text-slate-400 shrink-0 bg-slate-100 px-2 py-0.5 rounded-[6px]"
-              style={{ fontSize: "var(--text-micro)" }}
-            >
-              {num}
-            </span>
-            <CardTitle
-              className="font-bold group-hover:text-slate-600 transition-colors leading-tight shrink-0"
-              style={{
-                fontSize: "var(--text-card)",
-                letterSpacing: "var(--tracking-title)",
-              }}
-            >
-              {project.title}
-            </CardTitle>
-            <div className="flex gap-1.5 flex-wrap justify-end ml-auto">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+            <div className="flex items-center gap-3">
+              <span
+                className="tabular-nums font-bold text-slate-400 shrink-0 bg-slate-100 px-2 py-0.5 rounded-[6px]"
+                style={{ fontSize: "var(--text-micro)" }}
+              >
+                {num}
+              </span>
+              <CardTitle
+                className="font-bold group-hover:text-slate-600 transition-colors leading-tight shrink-0"
+                style={{
+                  fontSize: "var(--text-card)",
+                  letterSpacing: "var(--tracking-title)",
+                }}
+              >
+                {project.title}
+              </CardTitle>
+            </div>
+            <div className="flex gap-1.5 flex-wrap sm:justify-end sm:ml-auto">
               {project.tags.map((tag) => (
                 <Badge
                   key={tag}
