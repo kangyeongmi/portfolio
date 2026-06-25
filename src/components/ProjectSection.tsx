@@ -171,8 +171,37 @@ export default function ProjectSection({
         </div>
       )}
 
+      {/* ── Case study gallery (캡션) ── */}
+      {project.caseStudy?.gallery && project.caseStudy.gallery.length > 0 && (
+        <div className="mt-8 mb-10 flex flex-col gap-6">
+          {project.caseStudy.gallery.map((g, idx) => (
+            <figure key={idx}>
+              <div className="w-full bg-white rounded-xl border border-zinc-200 overflow-hidden shadow-sm">
+                <img
+                  src={g.src}
+                  alt={g.caption ?? `${project.title} 화면 ${idx + 1}`}
+                  className="w-full h-auto block"
+                />
+              </div>
+              {g.caption && (
+                <figcaption
+                  className="mt-2.5 text-zinc-500"
+                  style={{
+                    fontSize: "var(--text-caption)",
+                    lineHeight: "var(--leading-caption)",
+                    letterSpacing: "var(--tracking-caption)",
+                  }}
+                >
+                  {g.caption}
+                </figcaption>
+              )}
+            </figure>
+          ))}
+        </div>
+      )}
+
       {/* ── Visual Evidence ── */}
-      {project.images && project.images.length > 0 && (
+      {!project.caseStudy?.gallery && project.images && project.images.length > 0 && (
         <div className="mt-8 mb-10 flex flex-col gap-6">
           {project.images.map((asset, idx) => {
             const isVideo = asset.match(/\.(mp4|mov|webm)$/i);

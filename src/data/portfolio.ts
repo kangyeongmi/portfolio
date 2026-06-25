@@ -91,6 +91,13 @@ export const portfolioData = {
           "좌측 하단의 상담 인입 알림 및 서비스 알림 화면 구성",
           "상담 채팅 과정에서 나타나는 유려한 채팅 경험 설계",
         ],
+        gallery: [
+          {
+            src: "/images/portfolio/neo_rnd_tobe_1.png",
+            caption:
+              "To-Be · 통합 콘솔 — 브랜드 스위칭 사이드바, 상담 인박스, 우측 상담 요약·헬프센터·키워드를 하나의 화면으로 통합",
+          },
+        ],
       },
     },
     {
@@ -343,6 +350,7 @@ export type CaseStudy = {
   process: string[];
   decisions: { title: string; detail: string }[];
   results: string[];
+  gallery?: { src: string; caption?: string }[];
 };
 export type Project = (typeof portfolioData.projects)[number] & {
   images?: string[];
