@@ -64,6 +64,34 @@ export const portfolioData = {
         "/images/portfolio/neo_happytalk_rnd_3.png",
         "/images/portfolio/happytalk_ai_kb_5.png",
       ],
+      caseStudy: {
+        context:
+          "노후한 PHP 기반 코드 위에서 화면을 개선하는 데 시간이 오래 걸리는 상황이었습니다. 동시에 해피톡·콜브릿지 등 사내 여러 제품을 하나로 결합해, 브랜드를 전환하며 사용할 수 있는 통합 제품의 미래 청사진을 그리는 선행 연구가 필요했습니다.",
+        process: [
+          "내부 제품 상태를 휴리스틱으로 점검하는 리서치 진행",
+          "제품 전반의 병목 지점 도출",
+          "개선 방향을 담은 화면 제작",
+          "내부·전사 전파 후 대표 보고로 청사진을 확정하고 진행",
+        ],
+        decisions: [
+          {
+            title: "개별 화면 수정 대신 통합 신제품으로 전환",
+            detail:
+              "노후 화면을 리스트업하니 고쳐야 할 화면이 지나치게 많았고, 화면 내부의 문제도 산재해 있었습니다. 개별 개선으로는 한계가 분명해, 아예 새로운 프로덕트로 통합 서비스를 제공하는 방향을 택했습니다.",
+          },
+          {
+            title: "콜·해피톡을 스위칭하는 챗·콜 통합 서비스",
+            detail:
+              "분리돼 있던 제품 경험을 하나로 묶어, 고객사가 콜과 해피톡을 전환하며 챗·콜 통합 서비스를 한 곳에서 이용하도록 설계했습니다.",
+          },
+        ],
+        results: [
+          "전반적인 UI 룩과 디자인을 정비하고, 영역 내 기본 요소의 순서·배치를 재정리",
+          "상담사가 꼭 봐야 하는 화면·정보를 미리 알려주고 띄워주는 인박스 영역 설계",
+          "좌측 하단의 상담 인입 알림 및 서비스 알림 화면 구성",
+          "상담 채팅 과정에서 나타나는 유려한 채팅 경험 설계",
+        ],
+      },
     },
     {
       id: "p07",
@@ -310,6 +338,15 @@ export const portfolioData = {
 };
 
 export type PortfolioData = typeof portfolioData;
-export type Project = (typeof portfolioData.projects)[number] & { images?: string[] };
+export type CaseStudy = {
+  context: string;
+  process: string[];
+  decisions: { title: string; detail: string }[];
+  results: string[];
+};
+export type Project = (typeof portfolioData.projects)[number] & {
+  images?: string[];
+  caseStudy?: CaseStudy;
+};
 export type RecruiterSummaryItem = (typeof portfolioData.recruiterSummary)[number];
 export type CareerItem = (typeof portfolioData.career)[number];

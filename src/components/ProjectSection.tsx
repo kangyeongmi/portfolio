@@ -48,35 +48,128 @@ export default function ProjectSection({
         </div>
       </div>
 
-      {/* ── Problem / Strategy / Ownership ── */}
-      <div className="grid gap-8">
-        {[
-          { label: "문제", content: project.problem },
-          { label: "접근", content: project.strategy },
-        ].map((section) => (
-          <div key={section.label}>
+      {/* ── Case study (있으면) / 문제·접근 ── */}
+      {project.caseStudy ? (
+        <div className="grid gap-8">
+          {/* 맥락 · 문제 */}
+          {[
+            { label: "맥락", content: project.caseStudy.context },
+            { label: "문제", content: project.problem },
+          ].map((s) => (
+            <div key={s.label}>
+              <h4
+                className="font-semibold text-slate-400 uppercase tracking-wide mb-2"
+                style={{ fontSize: "var(--text-micro)", letterSpacing: "var(--tracking-caption)" }}
+              >
+                {s.label}
+              </h4>
+              <p
+                className="text-slate-600"
+                style={{ fontSize: "var(--text-body)", lineHeight: "var(--leading-body)", letterSpacing: "var(--tracking-body)" }}
+              >
+                {s.content}
+              </p>
+            </div>
+          ))}
+
+          {/* 과정 */}
+          <div>
             <h4
-              className="font-semibold text-slate-400 uppercase tracking-wide mb-2"
-              style={{
-                fontSize: "var(--text-micro)",
-                letterSpacing: "var(--tracking-caption)",
-              }}
+              className="font-semibold text-slate-400 uppercase tracking-wide mb-3"
+              style={{ fontSize: "var(--text-micro)", letterSpacing: "var(--tracking-caption)" }}
             >
-              {section.label}
+              과정
             </h4>
-            <p
-              className="text-slate-600"
-              style={{
-                fontSize: "var(--text-body)",
-                lineHeight: "var(--leading-body)",
-                letterSpacing: "var(--tracking-body)",
-              }}
-            >
-              {section.content}
-            </p>
+            <ol className="flex flex-col gap-2.5">
+              {project.caseStudy.process.map((step, i) => (
+                <li key={i} className="flex gap-3">
+                  <span className="mt-px flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-slate-100 text-[11px] font-semibold tabular-nums text-slate-500">
+                    {i + 1}
+                  </span>
+                  <span
+                    className="text-slate-600"
+                    style={{ fontSize: "var(--text-body)", lineHeight: "var(--leading-body)", letterSpacing: "var(--tracking-body)" }}
+                  >
+                    {step}
+                  </span>
+                </li>
+              ))}
+            </ol>
           </div>
-        ))}
-      </div>
+
+          {/* 핵심 결정 */}
+          <div>
+            <h4
+              className="font-semibold text-slate-400 uppercase tracking-wide mb-3"
+              style={{ fontSize: "var(--text-micro)", letterSpacing: "var(--tracking-caption)" }}
+            >
+              핵심 결정
+            </h4>
+            <div className="grid gap-3">
+              {project.caseStudy.decisions.map((d, i) => (
+                <div key={i} className="rounded-xl border border-slate-100 bg-slate-50 px-5 py-4">
+                  <p
+                    className="font-semibold text-slate-800 mb-1"
+                    style={{ fontSize: "var(--text-body)", letterSpacing: "var(--tracking-body)" }}
+                  >
+                    {d.title}
+                  </p>
+                  <p
+                    className="text-slate-600"
+                    style={{ fontSize: "var(--text-caption)", lineHeight: "var(--leading-body)", letterSpacing: "var(--tracking-body)" }}
+                  >
+                    {d.detail}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 결과 */}
+          <div>
+            <h4
+              className="font-semibold text-slate-400 uppercase tracking-wide mb-3"
+              style={{ fontSize: "var(--text-micro)", letterSpacing: "var(--tracking-caption)" }}
+            >
+              결과
+            </h4>
+            <ul className="flex flex-col gap-2">
+              {project.caseStudy.results.map((r, i) => (
+                <li
+                  key={i}
+                  className="flex gap-2.5 text-slate-600"
+                  style={{ fontSize: "var(--text-body)", lineHeight: "var(--leading-body)", letterSpacing: "var(--tracking-body)" }}
+                >
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-300" />
+                  <span>{r}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ) : (
+        <div className="grid gap-8">
+          {[
+            { label: "문제", content: project.problem },
+            { label: "접근", content: project.strategy },
+          ].map((section) => (
+            <div key={section.label}>
+              <h4
+                className="font-semibold text-slate-400 uppercase tracking-wide mb-2"
+                style={{ fontSize: "var(--text-micro)", letterSpacing: "var(--tracking-caption)" }}
+              >
+                {section.label}
+              </h4>
+              <p
+                className="text-slate-600"
+                style={{ fontSize: "var(--text-body)", lineHeight: "var(--leading-body)", letterSpacing: "var(--tracking-body)" }}
+              >
+                {section.content}
+              </p>
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* ── Visual Evidence ── */}
       {project.images && project.images.length > 0 && (
