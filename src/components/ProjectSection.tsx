@@ -15,6 +15,11 @@ export default function ProjectSection({
   const num = String(index + 1).padStart(2, "0");
   const [c1, c2] = projectGradient(index);
 
+  // 화면을 배경 위에 띄우는 플로팅 트리트먼트 (프로젝트 색 연동)
+  const frameBg = `radial-gradient(120% 100% at 25% 0%, ${c1}33, transparent 60%), linear-gradient(160deg, ${c2}26 0%, ${c1}1f 100%)`;
+  const frameImg =
+    "block w-full h-auto rounded-lg ring-1 ring-black/5 shadow-[0_18px_40px_-14px_rgba(0,0,0,0.3)]";
+
   return (
     <article
       id={project.id}
@@ -178,16 +183,11 @@ export default function ProjectSection({
         <div className="mt-8 mb-10 flex flex-col gap-6">
           {project.caseStudy.gallery.map((g, idx) => (
             <figure key={idx}>
-              <div
-                className="rounded-2xl p-4 sm:p-7"
-                style={{
-                  backgroundImage: `radial-gradient(120% 100% at 25% 0%, ${c1}33, transparent 60%), linear-gradient(160deg, ${c2}26 0%, ${c1}1f 100%)`,
-                }}
-              >
+              <div className="rounded-2xl p-4 sm:p-7" style={{ backgroundImage: frameBg }}>
                 <img
                   src={g.src}
                   alt={g.caption ?? `${project.title} 화면 ${idx + 1}`}
-                  className="block w-full h-auto rounded-lg ring-1 ring-black/5 shadow-[0_18px_40px_-14px_rgba(0,0,0,0.3)]"
+                  className={frameImg}
                 />
               </div>
               {g.caption && (
@@ -207,13 +207,13 @@ export default function ProjectSection({
         </div>
       )}
 
-      {/* ── Visual Evidence ── */}
+      {/* ── Visual Evidence (배경 위에 떠 있는 화면) ── */}
       {!project.caseStudy?.gallery && project.images && project.images.length > 0 && (
         <div className="mt-8 mb-10 flex flex-col gap-6">
           {project.images.map((asset, idx) => {
             const isVideo = asset.match(/\.(mp4|mov|webm)$/i);
             return (
-              <div key={idx} className="w-full bg-white rounded-xl border border-zinc-200 overflow-hidden shadow-sm">
+              <div key={idx} className="rounded-2xl p-4 sm:p-7" style={{ backgroundImage: frameBg }}>
                 {isVideo ? (
                   <video
                     src={asset}
@@ -221,13 +221,13 @@ export default function ProjectSection({
                     muted
                     playsInline
                     loop
-                    className="w-full h-auto block"
+                    className={frameImg}
                   />
                 ) : (
                   <img
                     src={asset}
                     alt={`${project.title} 자산 ${idx + 1}`}
-                    className="w-full h-auto block"
+                    className={frameImg}
                   />
                 )}
               </div>
