@@ -12,45 +12,24 @@ export default function ProjectNav({ projects }: ProjectNavProps) {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        let currentActive: string | null = null;
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            currentActive = entry.target.id;
-          }
-        });
-        
-        if (currentActive) {
-          setActiveId(currentActive);
-        }
-      },
-      { 
-        rootMargin: "-20% 0px -60% 0px" // Trigger when element is near the top
-      }
-    );
-
-    projects.forEach((p) => {
-      const el = document.getElementById(p.id);
-      if (el) observer.observe(el);
-    });
-
-    // Handle overall visibility (hide when near top of page)
+    // 헤더 하단 라인을 지난 '가장 마지막' 상세 섹션을 active로 (지나기 전엔 null → "Projects")
     const handleScroll = () => {
-      if (window.scrollY > 800) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
+      const threshold = 120; // 스티키 헤더 높이 + 여유
+      let current: string | null = null;
+      for (const p of projects) {
+        const el = document.getElementById(p.id);
+        if (el && el.getBoundingClientRect().top <= threshold) {
+          current = p.id;
+        }
       }
+      setActiveId(current);
+      setIsVisible(window.scrollY > 800);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll(); // Check initial state
+    handleScroll(); // 초기 상태
 
-    return () => {
-      observer.disconnect();
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [projects]);
 
   const activeProject = projects.find((p) => p.id === activeId);
