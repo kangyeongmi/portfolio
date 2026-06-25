@@ -97,6 +97,16 @@ export const portfolioData = {
             caption:
               "To-Be · 통합 콘솔 — 브랜드 스위칭 사이드바, 상담 인박스, 우측 상담 요약·헬프센터·키워드를 하나의 화면으로 통합",
           },
+          {
+            src: "/images/portfolio/neo_rnd_tobe_2.png",
+            caption:
+              "좌측 하단 알림 영역 — 중요 알림 스택과 상담 인입 알림함으로 놓치기 쉬운 문의를 상단에 노출",
+          },
+          {
+            src: "/images/portfolio/neo_rnd_tobe_3.png",
+            caption:
+              "상담 인박스 패널 — 메모·파일·태그·시간 보류·AI 탭과 상담 보류/종료 액션을 한곳에 모아 상담사 동선 단축",
+          },
         ],
       },
     },
