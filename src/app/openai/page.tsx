@@ -2,7 +2,6 @@ import { portfolioData } from "@/data/portfolio";
 import OpenAIHero from "@/components/OpenAIHero";
 import ProjectCard from "@/components/ProjectCard";
 import ProjectSection from "@/components/ProjectSection";
-import RecruiterSummary from "@/components/RecruiterSummary";
 import ProjectNav from "@/components/ProjectNav";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -12,7 +11,7 @@ const FONT_STACK =
   "'Inter', 'Apple SD Gothic Neo', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif";
 
 export default function OpenAIPortfolio() {
-  const { hero, recruiterSummary, projects, contact } = portfolioData;
+  const { hero, projects, contact } = portfolioData;
 
   return (
     <div style={{ fontFamily: FONT_STACK }}>
@@ -83,21 +82,6 @@ export default function OpenAIPortfolio() {
               이력서 · 경력기술서 보기 →
             </a>
           </div>
-        </section>
-
-        {/* ─── Recruiter Summary ─── */}
-        <section className="mb-24 animate-fade-in-up delay-100">
-          <h2
-            className="font-bold text-slate-900 mb-8"
-            style={{
-              fontSize: "var(--text-section)",
-              lineHeight: "var(--leading-section)",
-              letterSpacing: "var(--tracking-title)",
-            }}
-          >
-            기본 역량
-          </h2>
-          <RecruiterSummary items={recruiterSummary} />
         </section>
 
         {/* ─── Selected Projects (Cards) ─── */}
