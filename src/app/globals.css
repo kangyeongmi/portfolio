@@ -219,13 +219,19 @@ body {
   color: #475569;
   background: #f8fafc;
   border: 1px solid #e2e8f0;
-  padding: 0.5rem 0.75rem;
+  padding: 0.55rem 0.8rem;
 }
 .resume-doc td {
   border: 1px solid #e2e8f0;
-  padding: 0.5rem 0.75rem;
+  padding: 0.55rem 0.8rem;
   vertical-align: top;
 }
+.resume-doc tbody td:first-child {
+  font-weight: 600;
+  color: #1e293b;
+  white-space: nowrap;
+}
+.resume-doc tbody tr:nth-child(even) td { background: #fafafa; }
 .resume-doc code {
   background: #f1f5f9;
   padding: 0.1rem 0.35rem;
