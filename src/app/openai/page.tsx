@@ -74,6 +74,15 @@ export default function OpenAIPortfolio() {
               </Badge>
             ))}
           </div>
+
+          <div className="mt-8">
+            <a
+              href="/resume"
+              className="inline-flex items-center gap-1.5 rounded-[8px] border border-slate-300 px-4 py-2.5 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50 hover:border-slate-400"
+            >
+              이력서 · 경력기술서 보기 →
+            </a>
+          </div>
         </section>
 
         {/* ─── Recruiter Summary ─── */}

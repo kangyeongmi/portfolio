@@ -30,7 +30,7 @@ export default function OpenAIHero({ projects }: OpenAIHeroProps) {
 
   return (
     <section
-      className="relative min-h-[100svh] w-full overflow-hidden flex items-center"
+      className="relative min-h-[100svh] w-full flex items-center"
       style={{ fontFamily: FONT_STACK, backgroundColor: "#f7cf1c" }}
     >
       {/* ── Gradient blobs (figma ellipses 재현) ── */}
