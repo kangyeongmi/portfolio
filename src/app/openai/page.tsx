@@ -24,7 +24,7 @@ export default function OpenAIPortfolio() {
         {/* ─── Hero ─── */}
         <section className="mb-24 animate-fade-in-up">
           <h1
-            className="font-bold text-slate-900 mb-6"
+            className="font-bold text-zinc-900 mb-6"
             style={{
               fontSize: "var(--text-hero)",
               lineHeight: "var(--leading-hero)",
@@ -34,7 +34,7 @@ export default function OpenAIPortfolio() {
             {hero.headline}
           </h1>
           <p
-            className="text-slate-600 mb-8"
+            className="text-zinc-700 mb-8"
             style={{
               fontSize: "clamp(1rem, 1.5vw, 1.125rem)",
               lineHeight: 1.65,
@@ -48,7 +48,7 @@ export default function OpenAIPortfolio() {
               <Badge
                 key={s}
                 variant="secondary"
-                className="px-2.5 py-2 rounded-[6px] font-medium text-slate-500 bg-slate-100 hover:bg-slate-200 transition-colors border-none"
+                className="px-2.5 py-2 rounded-[6px] font-medium text-zinc-600 bg-zinc-100 hover:bg-zinc-200 transition-colors border-none"
                 style={{
                   fontSize: "var(--text-caption)",
                   letterSpacing: "var(--tracking-caption)",
@@ -63,7 +63,7 @@ export default function OpenAIPortfolio() {
               <Badge
                 key={t}
                 variant="outline"
-                className="px-2.5 py-2 text-slate-400 font-normal border-slate-200 rounded-[6px]"
+                className="px-2.5 py-2 text-zinc-500 font-normal border-zinc-200 rounded-[6px]"
                 style={{
                   fontSize: "var(--text-micro)",
                   letterSpacing: "var(--tracking-caption)",
@@ -77,7 +77,7 @@ export default function OpenAIPortfolio() {
           <div className="mt-8">
             <a
               href="/resume"
-              className="inline-flex items-center gap-1.5 rounded-[8px] bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-slate-700"
+              className="inline-flex items-center gap-1.5 rounded-[8px] bg-zinc-900 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-zinc-800"
             >
               이력서 · 경력기술서 보기 →
             </a>
@@ -87,7 +87,7 @@ export default function OpenAIPortfolio() {
         {/* ─── Selected Projects (Cards) ─── */}
         <section id="projects" className="mb-24 animate-fade-in-up delay-200 scroll-mt-24">
           <h2
-            className="font-bold text-slate-900 mb-2"
+            className="font-bold text-zinc-900 mb-2"
             style={{
               fontSize: "var(--text-section)",
               lineHeight: "var(--leading-section)",
@@ -97,7 +97,7 @@ export default function OpenAIPortfolio() {
             Projects
           </h2>
           <p
-            className="text-slate-500 mb-8"
+            className="text-zinc-500 mb-8"
             style={{
               fontSize: "var(--text-caption)",
               letterSpacing: "var(--tracking-caption)",
@@ -122,7 +122,7 @@ export default function OpenAIPortfolio() {
         </section>
 
         {/* ─── Closing CTA (탭: 소개 · 연락처 · 감사) ─── */}
-        <section className="border-t border-slate-200 pt-16 pb-8">
+        <section className="border-t border-zinc-200 pt-16 pb-8">
           <ClosingCTA email={contact.email} phone={contact.phone} />
         </section>
       </main>

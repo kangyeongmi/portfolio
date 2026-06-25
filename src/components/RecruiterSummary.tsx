@@ -10,11 +10,11 @@ export default function RecruiterSummary({ items }: RecruiterSummaryProps) {
       {items.map((item) => (
         <div
           key={item.title}
-          className="bg-slate-50 rounded-xl p-6 flex flex-col gap-3 border border-transparent hover:border-slate-200 transition-all duration-300 ease-out hover:scale-105 hover:shadow-lg group z-0 hover:z-10"
+          className="bg-zinc-50 rounded-xl p-6 flex flex-col gap-3 border border-transparent hover:border-zinc-200 transition-all duration-300 ease-out hover:scale-105 hover:shadow-lg group z-0 hover:z-10"
         >
           <div className="flex flex-col gap-1">
             <span
-              className="text-slate-400 font-bold uppercase tracking-wider"
+              className="text-zinc-500 font-bold uppercase tracking-wider"
               style={{
                 fontSize: "var(--text-micro)",
                 letterSpacing: "var(--tracking-caption)",
@@ -23,7 +23,7 @@ export default function RecruiterSummary({ items }: RecruiterSummaryProps) {
               {item.project}
             </span>
             <h3
-              className="font-bold text-slate-900 transition-colors"
+              className="font-bold text-zinc-900 transition-colors"
               style={{
                 fontSize: "var(--text-card)",
                 lineHeight: "var(--leading-card)",
@@ -34,7 +34,7 @@ export default function RecruiterSummary({ items }: RecruiterSummaryProps) {
             </h3>
           </div>
           <p
-            className="text-slate-600"
+            className="text-zinc-700"
             style={{
               fontSize: "var(--text-body)",
               lineHeight: "var(--leading-body)",

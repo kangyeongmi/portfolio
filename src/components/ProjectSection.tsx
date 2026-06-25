@@ -16,14 +16,14 @@ export default function ProjectSection({
   return (
     <article
       id={project.id}
-      className="pb-20 mb-20 border-b border-slate-100 last:border-0 last:mb-0 last:pb-0 scroll-mt-24"
+      className="pb-20 mb-20 border-b border-zinc-200 last:border-0 last:mb-0 last:pb-0 scroll-mt-24"
     >
       {/* ── Header ── */}
       <div className="mb-10">
         <ProjectHeader num={num} title={project.title} index={index} />
 
         <p
-          className="text-slate-600 mb-5"
+          className="text-zinc-700 mb-5"
           style={{
             fontSize: "var(--text-body)",
             lineHeight: "var(--leading-body)",
@@ -58,13 +58,13 @@ export default function ProjectSection({
           ].map((s) => (
             <div key={s.label}>
               <h4
-                className="font-semibold text-slate-400 uppercase tracking-wide mb-2"
+                className="font-semibold text-zinc-500 uppercase tracking-wide mb-2"
                 style={{ fontSize: "var(--text-micro)", letterSpacing: "var(--tracking-caption)" }}
               >
                 {s.label}
               </h4>
               <p
-                className="text-slate-600"
+                className="text-zinc-700"
                 style={{ fontSize: "var(--text-body)", lineHeight: "var(--leading-body)", letterSpacing: "var(--tracking-body)" }}
               >
                 {s.content}
@@ -75,7 +75,7 @@ export default function ProjectSection({
           {/* 과정 */}
           <div>
             <h4
-              className="font-semibold text-slate-400 uppercase tracking-wide mb-3"
+              className="font-semibold text-zinc-500 uppercase tracking-wide mb-3"
               style={{ fontSize: "var(--text-micro)", letterSpacing: "var(--tracking-caption)" }}
             >
               과정
@@ -83,11 +83,11 @@ export default function ProjectSection({
             <ol className="flex flex-col gap-2.5">
               {project.caseStudy.process.map((step, i) => (
                 <li key={i} className="flex gap-3">
-                  <span className="mt-px flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-slate-100 text-[11px] font-semibold tabular-nums text-slate-500">
+                  <span className="mt-px flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-zinc-200 text-[11px] font-semibold tabular-nums text-zinc-500">
                     {i + 1}
                   </span>
                   <span
-                    className="text-slate-600"
+                    className="text-zinc-700"
                     style={{ fontSize: "var(--text-body)", lineHeight: "var(--leading-body)", letterSpacing: "var(--tracking-body)" }}
                   >
                     {step}
@@ -100,22 +100,22 @@ export default function ProjectSection({
           {/* 핵심 결정 */}
           <div>
             <h4
-              className="font-semibold text-slate-400 uppercase tracking-wide mb-3"
+              className="font-semibold text-zinc-500 uppercase tracking-wide mb-3"
               style={{ fontSize: "var(--text-micro)", letterSpacing: "var(--tracking-caption)" }}
             >
               핵심 결정
             </h4>
             <div className="grid gap-3">
               {project.caseStudy.decisions.map((d, i) => (
-                <div key={i} className="rounded-xl border border-slate-100 bg-slate-50 px-5 py-4">
+                <div key={i} className="rounded-xl border border-zinc-200 bg-zinc-50 px-5 py-4">
                   <p
-                    className="font-semibold text-slate-800 mb-1"
+                    className="font-semibold text-zinc-900 mb-1"
                     style={{ fontSize: "var(--text-body)", letterSpacing: "var(--tracking-body)" }}
                   >
                     {d.title}
                   </p>
                   <p
-                    className="text-slate-600"
+                    className="text-zinc-700"
                     style={{ fontSize: "var(--text-caption)", lineHeight: "var(--leading-body)", letterSpacing: "var(--tracking-body)" }}
                   >
                     {d.detail}
@@ -128,7 +128,7 @@ export default function ProjectSection({
           {/* 결과 */}
           <div>
             <h4
-              className="font-semibold text-slate-400 uppercase tracking-wide mb-3"
+              className="font-semibold text-zinc-500 uppercase tracking-wide mb-3"
               style={{ fontSize: "var(--text-micro)", letterSpacing: "var(--tracking-caption)" }}
             >
               결과
@@ -137,10 +137,10 @@ export default function ProjectSection({
               {project.caseStudy.results.map((r, i) => (
                 <li
                   key={i}
-                  className="flex gap-2.5 text-slate-600"
+                  className="flex gap-2.5 text-zinc-700"
                   style={{ fontSize: "var(--text-body)", lineHeight: "var(--leading-body)", letterSpacing: "var(--tracking-body)" }}
                 >
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-300" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-400" />
                   <span>{r}</span>
                 </li>
               ))}
@@ -155,13 +155,13 @@ export default function ProjectSection({
           ].map((section) => (
             <div key={section.label}>
               <h4
-                className="font-semibold text-slate-400 uppercase tracking-wide mb-2"
+                className="font-semibold text-zinc-500 uppercase tracking-wide mb-2"
                 style={{ fontSize: "var(--text-micro)", letterSpacing: "var(--tracking-caption)" }}
               >
                 {section.label}
               </h4>
               <p
-                className="text-slate-600"
+                className="text-zinc-700"
                 style={{ fontSize: "var(--text-body)", lineHeight: "var(--leading-body)", letterSpacing: "var(--tracking-body)" }}
               >
                 {section.content}
@@ -177,7 +177,7 @@ export default function ProjectSection({
           {project.images.map((asset, idx) => {
             const isVideo = asset.match(/\.(mp4|mov|webm)$/i);
             return (
-              <div key={idx} className="w-full bg-white rounded-xl border border-slate-100 overflow-hidden shadow-sm">
+              <div key={idx} className="w-full bg-white rounded-xl border border-zinc-200 overflow-hidden shadow-sm">
                 {isVideo ? (
                   <video
                     src={asset}

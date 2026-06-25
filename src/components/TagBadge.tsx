@@ -12,8 +12,8 @@ export default function TagBadge({ label, variant = "soft" }: TagBadgeProps) {
     <span
       className={`inline-flex items-center px-2.5 py-1 rounded-[6px] whitespace-nowrap ${
         isSoft
-          ? "bg-slate-100 text-slate-500 font-medium border-none"
-          : "text-slate-400 font-normal border border-slate-200"
+          ? "bg-zinc-200 text-zinc-500 font-medium border-none"
+          : "text-zinc-500 font-normal border border-zinc-200"
       }`}
       style={{
         fontSize: "var(--text-micro)",

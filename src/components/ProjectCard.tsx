@@ -13,7 +13,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
   return (
     <a
       href={`#${project.id}`}
-      className="group relative flex min-h-[180px] flex-col gap-2 overflow-hidden rounded-[22px] p-5 transition-transform duration-300 ease-out hover:scale-[1.02] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+      className="group relative flex min-h-[180px] flex-col gap-2 overflow-hidden rounded-[22px] p-5 transition-transform duration-300 ease-out hover:scale-[1.02] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900"
       style={{
         backgroundImage: `radial-gradient(120% 90% at 25% 12%, rgba(255,255,255,0.32), rgba(255,255,255,0) 55%), linear-gradient(140deg, ${c1} 0%, ${c2} 96%)`,
       }}

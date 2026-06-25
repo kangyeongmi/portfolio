@@ -20,7 +20,7 @@ export default function ProjectHeader({ num, title, index }: ProjectHeaderProps)
         {num}
       </span>
       <h3
-        className="font-bold text-slate-900"
+        className="font-bold text-zinc-900"
         style={{
           fontSize: "var(--text-title)",
           lineHeight: "var(--leading-title)",
