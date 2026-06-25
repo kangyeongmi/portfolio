@@ -3,6 +3,7 @@ import OpenAIHero from "@/components/OpenAIHero";
 import ProjectCard from "@/components/ProjectCard";
 import ProjectSection from "@/components/ProjectSection";
 import ProjectNav from "@/components/ProjectNav";
+import ClosingCTA from "@/components/ClosingCTA";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
@@ -87,7 +88,7 @@ export default function OpenAIPortfolio() {
         {/* ─── Selected Projects (Cards) ─── */}
         <section id="projects" className="mb-24 animate-fade-in-up delay-200 scroll-mt-24">
           <h2
-            className="font-bold text-slate-900 mb-8"
+            className="font-bold text-slate-900 mb-2"
             style={{
               fontSize: "var(--text-section)",
               lineHeight: "var(--leading-section)",
@@ -96,7 +97,16 @@ export default function OpenAIPortfolio() {
           >
             Projects
           </h2>
-          <div className="grid gap-5">
+          <p
+            className="text-slate-500 mb-8"
+            style={{
+              fontSize: "var(--text-caption)",
+              letterSpacing: "var(--tracking-caption)",
+            }}
+          >
+            B2B SaaS · AI · 데이터 · 디자인 시스템 전반의 대표 작업
+          </p>
+          <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
             {projects.map((project, i) => (
               <ProjectCard key={project.id} project={project} index={i} />
             ))}
@@ -110,6 +120,11 @@ export default function OpenAIPortfolio() {
               <ProjectSection key={project.id} project={project} index={i} />
             ))}
           </div>
+        </section>
+
+        {/* ─── Closing CTA ─── */}
+        <section className="mb-8">
+          <ClosingCTA />
         </section>
 
         {/* ─── Contact ─── */}
