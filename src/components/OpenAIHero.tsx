@@ -16,7 +16,7 @@ const FONT_STACK =
 const SELECTED_IDS = ["p09", "p07", "p04", "p06", "p10", "p01"];
 
 export default function OpenAIHero({ projects }: OpenAIHeroProps) {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const selected = SELECTED_IDS.map((id) => projects.find((p) => p.id === id)).filter(
     (p): p is Project => Boolean(p)
   );
