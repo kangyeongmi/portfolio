@@ -4,7 +4,6 @@ import ProjectCard from "@/components/ProjectCard";
 import ProjectSection from "@/components/ProjectSection";
 import ProjectNav from "@/components/ProjectNav";
 import ClosingCTA from "@/components/ClosingCTA";
-import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 // 영문 → Inter, 한글 → Apple SD Gothic Neo (이 페이지 한정)
@@ -122,61 +121,9 @@ export default function OpenAIPortfolio() {
           </div>
         </section>
 
-        {/* ─── Closing CTA ─── */}
-        <section className="mb-8">
-          <ClosingCTA />
-        </section>
-
-        {/* ─── Contact ─── */}
-        <section className="border-t border-slate-200 pt-16 pb-20">
-          <h2
-            className="font-bold text-slate-900 mb-8"
-            style={{
-              fontSize: "var(--text-section)",
-              lineHeight: "var(--leading-section)",
-              letterSpacing: "var(--tracking-title)",
-            }}
-          >
-            Contact
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {Object.entries(contact)
-              .filter(([key]) => key !== "figma")
-              .map(([key, value]) => (
-                <a
-                  key={key}
-                  href={
-                    key === "email" && value !== "TODO"
-                      ? `mailto:${value}`
-                      : value !== "TODO"
-                      ? value
-                      : "#"
-                  }
-                  className="group block outline-none focus-visible:ring-2 focus-visible:ring-neutral-900 rounded-xl"
-                >
-                  <Card className="p-5 transition-all duration-200 border border-slate-200 shadow-none group-hover:border-slate-300 group-hover:shadow-sm">
-                    <div
-                      className="text-slate-400 font-semibold uppercase mb-1"
-                      style={{
-                        fontSize: "var(--text-micro)",
-                        letterSpacing: "var(--tracking-caption)",
-                      }}
-                    >
-                      {key}
-                    </div>
-                    <div
-                      className="text-slate-600 font-medium group-hover:text-slate-900 transition-colors"
-                      style={{
-                        fontSize: "var(--text-body)",
-                        lineHeight: "var(--leading-body)",
-                      }}
-                    >
-                      {value}
-                    </div>
-                  </Card>
-                </a>
-              ))}
-          </div>
+        {/* ─── Closing CTA (탭: 소개 · 연락처 · 감사) ─── */}
+        <section className="border-t border-slate-200 pt-16 pb-8">
+          <ClosingCTA email={contact.email} phone={contact.phone} />
         </section>
       </main>
     </div>
