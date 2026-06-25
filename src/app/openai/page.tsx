@@ -92,7 +92,7 @@ export default function OpenAIPortfolio() {
         </section>
 
         {/* ─── Selected Projects (Cards) ─── */}
-        <section className="mb-24 animate-fade-in-up delay-200">
+        <section id="projects" className="mb-24 animate-fade-in-up delay-200 scroll-mt-24">
           <h2
             className="font-bold text-slate-900 mb-8"
             style={{

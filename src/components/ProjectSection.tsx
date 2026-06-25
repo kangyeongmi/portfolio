@@ -48,29 +48,6 @@ export default function ProjectSection({
         </div>
       </div>
 
-      {/* ── Key Relevance ── */}
-      <div className="mb-10 bg-slate-50 rounded-xl px-6 py-5">
-        <p
-          className="font-semibold text-slate-400 mb-1"
-          style={{
-            fontSize: "var(--text-micro)",
-            letterSpacing: "var(--tracking-caption)",
-          }}
-        >
-          핵심 역량
-        </p>
-        <p
-          className="text-slate-600"
-          style={{
-            fontSize: "var(--text-body)",
-            lineHeight: "var(--leading-body)",
-            letterSpacing: "var(--tracking-body)",
-          }}
-        >
-          {project.tmapRelevance}
-        </p>
-      </div>
-
       {/* ── Problem / Strategy / Ownership ── */}
       <div className="grid gap-8">
         {[

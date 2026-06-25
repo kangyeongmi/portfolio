@@ -45,3 +45,6 @@ next-env.d.ts
 *.mp4
 *.avi
 /public/videos/
+
+# Local working assets / non-public source captures (incl. unreleased demo screens)
+/screen/

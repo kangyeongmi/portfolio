@@ -7,8 +7,7 @@ const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
   title: "UX/UI Designer Portfolio",
-  description:
-    "8년차 UX/UI 디자이너의 티맵모빌리티 Product Designer 지원용 포트폴리오",
+  description: "8년차 UX/UI 디자이너 강영미의 프로덕트 디자인 포트폴리오",
 };
 
 export default function RootLayout({

@@ -23,7 +23,7 @@ export async function generateMetadata({
   if (!project) return { title: "Project Not Found" };
 
   return {
-    title: `${project.title} — TMAP Portfolio`,
+    title: `${project.title} — 강영미 Portfolio`,
     description: project.summary,
   };
 }
