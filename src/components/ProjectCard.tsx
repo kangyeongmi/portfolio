@@ -1,5 +1,5 @@
 import { Project } from "@/data/portfolio";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 interface ProjectCardProps {
@@ -16,7 +16,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       className="group block h-full transition-all duration-300 ease-out hover:scale-105 active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 z-0 hover:z-10"
     >
       <Card className="h-full transition-all duration-300 border border-slate-200 bg-white group-hover:bg-slate-50 shadow-none group-hover:shadow-lg group-hover:border-slate-300 rounded-[8px]">
-        <CardHeader className="pb-3 pt-5 px-6">
+        <CardHeader className="py-4 px-6">
           <div className="flex flex-col sm:flex-row sm:items-center gap-3">
             <div className="flex items-center gap-3">
               <span
@@ -48,27 +48,6 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             </div>
           </div>
         </CardHeader>
-        <CardContent className="flex flex-col gap-3 px-6 pb-5">
-          <div
-            className="text-slate-600"
-            style={{
-              fontSize: "var(--text-body)",
-              lineHeight: "var(--leading-body)",
-              letterSpacing: "var(--tracking-body)",
-            }}
-          >
-            {project.summary}
-          </div>
-          <p
-            className="text-slate-400 leading-snug"
-            style={{
-              fontSize: "var(--text-caption)",
-              letterSpacing: "var(--tracking-caption)",
-            }}
-          >
-            {project.tmapRelevance}
-          </p>
-        </CardContent>
       </Card>
     </a>
   );
