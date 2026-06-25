@@ -20,7 +20,7 @@ export default function ProjectSection({
     >
       {/* ── Header ── */}
       <div className="mb-10">
-        <ProjectHeader num={num} title={project.title} />
+        <ProjectHeader num={num} title={project.title} index={index} />
 
         <p
           className="text-slate-600 mb-5"
