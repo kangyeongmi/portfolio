@@ -19,7 +19,10 @@ export default function ResumePage() {
   );
 
   return (
-    <main className="min-h-screen overflow-x-hidden bg-white" style={{ fontFamily: FONT_STACK }}>
+    <main
+      className="min-h-screen overflow-x-hidden bg-white"
+      style={{ fontFamily: FONT_STACK }}
+    >
       <div className="mx-auto max-w-[860px] px-6 py-16 md:py-20">
         <a
           href="/"
@@ -28,18 +31,7 @@ export default function ResumePage() {
           ← 포트폴리오로 돌아가기
         </a>
         <article className="resume-doc">
-          <ReactMarkdown
-            remarkPlugins={[remarkGfm]}
-            components={{
-              table: ({ node, ...props }) => (
-                <div className="resume-table-scroll">
-                  <table {...props} />
-                </div>
-              ),
-            }}
-          >
-            {md}
-          </ReactMarkdown>
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>{md}</ReactMarkdown>
         </article>
       </div>
     </main>
