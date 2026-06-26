@@ -23,7 +23,7 @@ export const portfolioData = {
         label: "Visual",
         items: ["Photoshop", "Illustrator", "After Effects", "Lottie"],
       },
-      { label: "Dev", items: ["VS Code", "Git", "HTML/CSS"] },
+      { label: "Dev", items: ["VS Code", "GitHub", "HTML/CSS"] },
       { label: "Collab", items: ["Jira", "Confluence", "Notion", "Slack"] },
       {
         label: "UX",
