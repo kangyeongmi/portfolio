@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { ChevronLeft } from "lucide-react";
 
 export const metadata = {
   title: "이력서 · 경력기술서 — 강영미",
@@ -26,9 +27,10 @@ export default function ResumePage() {
       <div className="mx-auto max-w-[860px] px-6 py-16 md:py-20">
         <a
           href="/"
-          className="mb-10 inline-flex items-center gap-1 text-sm text-slate-400 transition-colors hover:text-slate-900"
+          className="mb-10 inline-flex items-center gap-1 text-sm text-zinc-400 transition-colors hover:text-zinc-900"
         >
-          ← 포트폴리오로 돌아가기
+          <ChevronLeft size={16} />
+          포트폴리오로 돌아가기
         </a>
         <article className="resume-doc">
           <ReactMarkdown remarkPlugins={[remarkGfm]}>{md}</ReactMarkdown>
