@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { portfolioData } from "@/data/portfolio";
 import OpenAIHero from "@/components/OpenAIHero";
 import ProjectCard from "@/components/ProjectCard";
@@ -58,19 +59,34 @@ export default function OpenAIPortfolio() {
               </Badge>
             ))}
           </ul>
-          <div className="flex flex-wrap gap-2">
-            {hero.tools.map((t) => (
-              <Badge
-                key={t}
-                variant="outline"
-                className="px-2.5 py-2 text-zinc-500 font-normal border-zinc-200 rounded-[6px]"
-                style={{
-                  fontSize: "var(--text-micro)",
-                  letterSpacing: "var(--tracking-caption)",
-                }}
-              >
-                {t}
-              </Badge>
+          <div className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-2.5 items-start">
+            {hero.toolGroups.map((g) => (
+              <Fragment key={g.label}>
+                <span
+                  className="pt-2 font-semibold uppercase tracking-wide text-zinc-400"
+                  style={{
+                    fontSize: "var(--text-micro)",
+                    letterSpacing: "var(--tracking-caption)",
+                  }}
+                >
+                  {g.label}
+                </span>
+                <div className="flex flex-wrap gap-1.5">
+                  {g.items.map((t) => (
+                    <Badge
+                      key={t}
+                      variant="outline"
+                      className="px-2.5 py-2 text-zinc-500 font-normal border-zinc-200 rounded-[6px]"
+                      style={{
+                        fontSize: "var(--text-micro)",
+                        letterSpacing: "var(--tracking-caption)",
+                      }}
+                    >
+                      {t}
+                    </Badge>
+                  ))}
+                </div>
+              </Fragment>
             ))}
           </div>
 

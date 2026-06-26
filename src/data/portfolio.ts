@@ -4,23 +4,31 @@ export const portfolioData = {
     subHeadline:
       "복잡한 B2B SaaS와 특수 디바이스 환경을 설계해왔습니다. 데이터를 보고 다음 행동을 바로 결정할 수 있는 화면을 만드는 데 집중합니다.",
     strengths: [
-      "모빌리티 현장 사용성",
-      "복잡한 도메인 설계",
-      "정보 구조(IA) 설계",
-      "데이터 시각화",
-      "문제해결에 집요한 편",
       "디자인 시스템 구축 및 운영",
       "AI 활용 디자인 프로세스",
-      "크로스팀 커뮤니케이션",
+      "데이터 시각화",
       "사용성 테스트 및 검증",
+      "크로스팀 커뮤니케이션",
     ],
-    tools: [
-      "Figma", "Storybook", "Prototyping",
-      "After Effects", "Lottie", "Photoshop", "Illustrator",
-      "Claude", "ChatGPT", "Gemini", "Antigravity", "Git", "HTML/CSS",
-      "Jira", "Confluence", "Notion", "Slack",
-      "유저 플로우", "와이어프레임", "GUI 가이드",
-      "사용성 테스트", "디자인 QA", "개발 핸드오프",
+    toolGroups: [
+      {
+        label: "Design",
+        items: ["Figma", "Storybook", "Prototyping", "와이어프레임", "GUI 가이드"],
+      },
+      {
+        label: "AI",
+        items: ["Claude", "ChatGPT", "Gemini", "Midjourney", "Codex", "Antigravity"],
+      },
+      {
+        label: "Visual",
+        items: ["Photoshop", "Illustrator", "After Effects", "Lottie"],
+      },
+      { label: "Dev", items: ["VS Code", "Git", "HTML/CSS"] },
+      { label: "Collab", items: ["Jira", "Confluence", "Notion", "Slack"] },
+      {
+        label: "UX",
+        items: ["유저 플로우", "사용성 테스트", "디자인 QA", "개발 핸드오프"],
+      },
     ],
   },
   recruiterSummary: [

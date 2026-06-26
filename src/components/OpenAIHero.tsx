@@ -63,14 +63,14 @@ export default function OpenAIHero({ projects }: OpenAIHeroProps) {
               Portfolio
             </h1>
             <p
-              className="mt-4 font-semibold"
+              className="mt-4 font-semibold text-white"
               style={{
                 fontSize: "clamp(1rem, 2.2vw, 1.5rem)",
                 letterSpacing: "-0.01em",
-                color: "#211a08",
+                textShadow: "0 1px 16px rgba(40,28,0,0.3)",
               }}
             >
-              강영미 · Product Designer
+              Product Designer
             </p>
           </div>
 
