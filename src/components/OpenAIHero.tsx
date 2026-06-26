@@ -12,8 +12,8 @@ interface OpenAIHeroProps {
 const FONT_STACK =
   "'Inter', 'Apple SD Gothic Neo', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif";
 
-// 커버 패널에 노출할 대표작 (보편적 임팩트 상위 6)
-const SELECTED_IDS = ["p09", "p07", "p04", "p06", "p10", "p01"];
+// 커버 패널에 노출할 대표작 (상위 6 = 딥다이브 3 + 강한 케이스)
+const SELECTED_IDS = ["p09", "p11", "p07", "p04", "p06", "p10"];
 
 export default function OpenAIHero({ projects }: OpenAIHeroProps) {
   const [open, setOpen] = useState(false);
@@ -54,13 +54,21 @@ export default function OpenAIHero({ projects }: OpenAIHeroProps) {
           <div>
             <h1
               className="font-bold leading-none text-white"
-              style={{ fontSize: "clamp(3rem, 11vw, 8rem)", letterSpacing: "-0.02em" }}
+              style={{
+                fontSize: "clamp(3rem, 11vw, 8rem)",
+                letterSpacing: "-0.02em",
+                textShadow: "0 2px 28px rgba(40,28,0,0.28), 0 1px 3px rgba(40,28,0,0.18)",
+              }}
             >
               Portfolio
             </h1>
             <p
-              className="mt-4 font-medium text-white"
-              style={{ fontSize: "clamp(1rem, 2.2vw, 1.5rem)", letterSpacing: "-0.01em" }}
+              className="mt-4 font-semibold"
+              style={{
+                fontSize: "clamp(1rem, 2.2vw, 1.5rem)",
+                letterSpacing: "-0.01em",
+                color: "#211a08",
+              }}
             >
               강영미 · Product Designer
             </p>

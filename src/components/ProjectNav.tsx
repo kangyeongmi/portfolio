@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { ChevronUp } from "lucide-react";
 import { Project } from "@/data/portfolio";
 
 interface ProjectNavProps {
@@ -46,15 +47,16 @@ export default function ProjectNav({ projects }: ProjectNavProps) {
             {activeProject ? activeProject.title : "Projects"}
           </span>
         </div>
-        <a 
-          href="#" 
-          className="text-xs font-medium text-zinc-500 hover:text-zinc-900 whitespace-nowrap transition-colors"
+        <a
+          href="#"
+          aria-label="맨 위로"
+          className="shrink-0 rounded-md p-1 text-zinc-500 hover:text-zinc-900 transition-colors"
           onClick={(e) => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
-          맨 위로
+          <ChevronUp size={18} />
         </a>
       </div>
     </div>

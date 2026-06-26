@@ -240,6 +240,26 @@ body {
 }
 .resume-doc a { color: #0066cc; }
 
+/* 표 래퍼: 혹시 모를 넘침 대비 가로 스크롤 허용 */
+.resume-table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+/* 모바일: 셀을 줄바꿈해 표가 뷰포트 안에 들어오게 (페이지 가로 오버플로 방지) */
+@media (max-width: 560px) {
+  .resume-doc tbody td:first-child {
+    white-space: normal;
+  }
+  .resume-doc th,
+  .resume-doc td {
+    padding: 0.45rem 0.5rem;
+  }
+  .resume-doc {
+    font-size: 0.9rem;
+  }
+}
+
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);

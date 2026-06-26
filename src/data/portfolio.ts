@@ -111,6 +111,73 @@ export const portfolioData = {
       },
     },
     {
+      id: "p11",
+      title: "Happytalk End-user Renewal",
+      role: "Product Designer",
+      period: "2026.04 ~ 2026.05",
+      company: "블룸에이아이",
+      platform: "Mobile / Web",
+      users: "일반 사용자 (B2C)",
+      summary: "사용자가 경험하는 채팅 화면을 더 현대적이고 쓰기 편하게 고쳤습니다.",
+      tags: ["모바일 UX", "인터랙션", "B2C 리뉴얼"],
+      problem: "채팅 UI가 오래되어 브랜드 이미지를 깎고 있었고, 모바일에서 한 손으로 조작하기 불편했습니다.",
+      strategy: "부드러운 움직임을 넣고 한 손으로 누르기 쉬운 위치에 주요 버튼을 배치했습니다.",
+      ownership: "리뉴얼 후에 사용자가 중간에 나가는 비율을 줄이고 긍정적인 피드백을 받았습니다.",
+      images: [
+        "/images/portfolio/happytalk_enduser_mobile.png",
+        "/images/portfolio/happytalk_enduser_web.png",
+      ],
+      caseStudy: {
+        context:
+          "엔드유저 웹 위젯의 설정 페이지에 기능이 산발적으로 덕지덕지 붙어 있었고, 노후한 UI에 어디가 어떻게 연계되는 페이지인지 앵커조차 되지 않아 설정을 이해하는 첫 장벽이 높았습니다. 웹 위젯 설치 장벽을 낮추고 러닝커브를 완만하게 해, 누구나 홈페이지에 채팅 버튼을 달 수 있도록 하는 것이 목표였습니다.",
+        process: [
+          "설정·웹 위젯 설정 페이지와 최종 엔드유저 웹 위젯 화면을 함께 분석",
+          "설정별 동선 분석",
+          "AI 프로토타이핑으로 화면 케이스를 정돈하고, 설정 시 웹에 노출되는 홈 위젯 페이지도 케이스·타사 플로우와 함께 점검",
+          "기획·개발·디자인 논의로 수정 가능한 범위를 일정 내에서 확정해 진행",
+        ],
+        decisions: [
+          {
+            title: "최신 홈 위젯 트렌드에 맞춘 디자인 룩 업데이트",
+            detail:
+              "노후한 위젯 디자인을 최근 홈 위젯 트렌드와 디자인 결에 맞춰 갱신해, 브랜드 인상과 첫 진입 장벽을 함께 개선했습니다.",
+          },
+          {
+            title: "상담내역을 '메시지' 탭으로 분리",
+            detail:
+              "이전에는 상담 버튼을 눌러야만 보이던 상담내역 리스트를 별도의 메시지 탭으로 빼, 메시지 리스트로 정리했습니다.",
+          },
+          {
+            title: "홈 버튼 → 채팅 문의 유입으로 플로우 전면 개편",
+            detail:
+              "홈 버튼을 누르면 곧바로 채팅으로 문의가 유입되도록, UX 플로우를 채팅 문의 유입 중심으로 다시 설계했습니다.",
+          },
+        ],
+        results: [
+          "노후 위젯을 최신 홈 위젯 트렌드에 맞춰 갱신해 브랜드 인상과 첫 진입 인상을 개선",
+          "설정·연계 구조를 정돈하고 러닝커브를 낮춰, 누구나 홈페이지에 채팅 버튼을 달 수 있는 흐름으로 단순화",
+          "홈 → 채팅 유입과 메시지 탭 분리로 엔드유저의 문의 시작·이력 확인 동선을 단축",
+        ],
+        gallery: [
+          {
+            src: "/images/portfolio/enduser_home.png",
+            caption:
+              "To-Be · 홈 — 인사·입력창과 '다른 방법으로'(카카오·메시지·전화)를 노출, 홈에서 바로 채팅 문의로 유입",
+          },
+          {
+            src: "/images/portfolio/enduser_message.png",
+            caption:
+              "To-Be · 메시지 탭 — 상담 버튼을 눌러야 보이던 상담내역을 별도 메시지 리스트로 분리",
+          },
+          {
+            src: "/images/portfolio/enduser_chat.png",
+            caption:
+              "To-Be · 채팅 — 빠른 답변 칩과 입력창으로 문의를 매끄럽게 이어가는 채팅 경험",
+          },
+        ],
+      },
+    },
+    {
       id: "p07",
       title: "Happytalk LNB & SaaS UX",
       role: "Product Designer",
@@ -280,73 +347,6 @@ export const portfolioData = {
         "/images/portfolio/voice_caddie_app_2.png",
         "/images/portfolio/voice_caddie_app_3.png",
       ],
-    },
-    {
-      id: "p11",
-      title: "Happytalk End-user Renewal",
-      role: "Product Designer",
-      period: "2026.04 ~ 2026.05",
-      company: "블룸에이아이",
-      platform: "Mobile / Web",
-      users: "일반 사용자 (B2C)",
-      summary: "사용자가 경험하는 채팅 화면을 더 현대적이고 쓰기 편하게 고쳤습니다.",
-      tags: ["모바일 UX", "인터랙션", "B2C 리뉴얼"],
-      problem: "채팅 UI가 오래되어 브랜드 이미지를 깎고 있었고, 모바일에서 한 손으로 조작하기 불편했습니다.",
-      strategy: "부드러운 움직임을 넣고 한 손으로 누르기 쉬운 위치에 주요 버튼을 배치했습니다.",
-      ownership: "리뉴얼 후에 사용자가 중간에 나가는 비율을 줄이고 긍정적인 피드백을 받았습니다.",
-      images: [
-        "/images/portfolio/happytalk_enduser_mobile.png",
-        "/images/portfolio/happytalk_enduser_web.png",
-      ],
-      caseStudy: {
-        context:
-          "엔드유저 웹 위젯의 설정 페이지에 기능이 산발적으로 덕지덕지 붙어 있었고, 노후한 UI에 어디가 어떻게 연계되는 페이지인지 앵커조차 되지 않아 설정을 이해하는 첫 장벽이 높았습니다. 웹 위젯 설치 장벽을 낮추고 러닝커브를 완만하게 해, 누구나 홈페이지에 채팅 버튼을 달 수 있도록 하는 것이 목표였습니다.",
-        process: [
-          "설정·웹 위젯 설정 페이지와 최종 엔드유저 웹 위젯 화면을 함께 분석",
-          "설정별 동선 분석",
-          "AI 프로토타이핑으로 화면 케이스를 정돈하고, 설정 시 웹에 노출되는 홈 위젯 페이지도 케이스·타사 플로우와 함께 점검",
-          "기획·개발·디자인 논의로 수정 가능한 범위를 일정 내에서 확정해 진행",
-        ],
-        decisions: [
-          {
-            title: "최신 홈 위젯 트렌드에 맞춘 디자인 룩 업데이트",
-            detail:
-              "노후한 위젯 디자인을 최근 홈 위젯 트렌드와 디자인 결에 맞춰 갱신해, 브랜드 인상과 첫 진입 장벽을 함께 개선했습니다.",
-          },
-          {
-            title: "상담내역을 '메시지' 탭으로 분리",
-            detail:
-              "이전에는 상담 버튼을 눌러야만 보이던 상담내역 리스트를 별도의 메시지 탭으로 빼, 메시지 리스트로 정리했습니다.",
-          },
-          {
-            title: "홈 버튼 → 채팅 문의 유입으로 플로우 전면 개편",
-            detail:
-              "홈 버튼을 누르면 곧바로 채팅으로 문의가 유입되도록, UX 플로우를 채팅 문의 유입 중심으로 다시 설계했습니다.",
-          },
-        ],
-        results: [
-          "노후 위젯을 최신 홈 위젯 트렌드에 맞춰 갱신해 브랜드 인상과 첫 진입 인상을 개선",
-          "설정·연계 구조를 정돈하고 러닝커브를 낮춰, 누구나 홈페이지에 채팅 버튼을 달 수 있는 흐름으로 단순화",
-          "홈 → 채팅 유입과 메시지 탭 분리로 엔드유저의 문의 시작·이력 확인 동선을 단축",
-        ],
-        gallery: [
-          {
-            src: "/images/portfolio/enduser_home.png",
-            caption:
-              "To-Be · 홈 — 인사·입력창과 '다른 방법으로'(카카오·메시지·전화)를 노출, 홈에서 바로 채팅 문의로 유입",
-          },
-          {
-            src: "/images/portfolio/enduser_message.png",
-            caption:
-              "To-Be · 메시지 탭 — 상담 버튼을 눌러야 보이던 상담내역을 별도 메시지 리스트로 분리",
-          },
-          {
-            src: "/images/portfolio/enduser_chat.png",
-            caption:
-              "To-Be · 채팅 — 빠른 답변 칩과 입력창으로 문의를 매끄럽게 이어가는 채팅 경험",
-          },
-        ],
-      },
     },
     {
       id: "p08",
