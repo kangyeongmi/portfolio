@@ -12,7 +12,6 @@ export default function ProjectSection({
   project,
   index,
 }: ProjectSectionProps) {
-  const num = String(index + 1).padStart(2, "0");
   const [c1, c2] = projectGradient(index);
 
   // 화면을 배경 위에 띄우는 플로팅 트리트먼트 (프로젝트 색 연동)
@@ -27,7 +26,7 @@ export default function ProjectSection({
     >
       {/* ── Header ── */}
       <div className="mb-10">
-        <ProjectHeader num={num} title={project.title} />
+        <ProjectHeader title={project.title} />
 
         <p
           className="text-zinc-700 mb-5"
