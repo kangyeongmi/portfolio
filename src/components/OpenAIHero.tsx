@@ -57,7 +57,6 @@ export default function OpenAIHero({ projects }: OpenAIHeroProps) {
               style={{
                 fontSize: "clamp(3rem, 11vw, 8rem)",
                 letterSpacing: "-0.02em",
-                textShadow: "0 2px 28px rgba(40,28,0,0.28), 0 1px 3px rgba(40,28,0,0.18)",
               }}
             >
               Portfolio

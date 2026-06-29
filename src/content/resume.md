@@ -22,7 +22,7 @@ B2B SaaS, 상담/CS 솔루션, AI UX, 데이터 대시보드, 디자인 시스�
 | SaaS / Data | B2B SaaS, Admin UX, Dashboard UX, Statistics UX, Data Table UX |
 | AI / System | AI UX, AI Dashboard, AI Critic Process, Design System, UI QA |
 | Mobile / Device | Native App, Hybrid App, Tablet App, Smartwatch GUI, Hand Device GUI |
-| Tools | Figma, Google Analytics, After Effects, Lottie, Bodymovin |
+| Tools | Figma, After Effects, Lottie, Bodymovin |
 
 ---
 
@@ -119,4 +119,4 @@ Caddie App Tablet·Admin Product Design 및 골프존앨범 App 운영·고도�
 
 ## Skills
 
-UX Design · UI Design · Product Design · Figma · Design System · B2B SaaS · Dashboard UX · Admin UX · AI UX · AI Product UX · Information Architecture · User Flow · Interaction Design · Prototyping · Data Visualization · UI QA · Design QA · Component Guideline · Design Token · Google Analytics · After Effects · Lottie · Bodymovin · Mobile App Design · Native App Design · Tablet App Design · Smartwatch GUI
+UX Design · UI Design · Product Design · Figma · Design System · B2B SaaS · Dashboard UX · Admin UX · AI UX · AI Product UX · Information Architecture · User Flow · Interaction Design · Prototyping · Data Visualization · UI QA · Design QA · Component Guideline · Design Token · After Effects · Lottie · Bodymovin · Mobile App Design · Native App Design · Tablet App Design · Smartwatch GUI
