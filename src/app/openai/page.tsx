@@ -1,8 +1,7 @@
 import { Fragment } from "react";
 import { portfolioData } from "@/data/portfolio";
 import OpenAIHero from "@/components/OpenAIHero";
-import ProjectGrid from "@/components/ProjectGrid";
-import ProjectSection from "@/components/ProjectSection";
+import ProjectsExplorer from "@/components/ProjectsExplorer";
 import ProjectNav from "@/components/ProjectNav";
 import ClosingCTA from "@/components/ClosingCTA";
 import { Badge } from "@/components/ui/badge";
@@ -100,19 +99,8 @@ export default function OpenAIPortfolio() {
           </div>
         </section>
 
-        {/* ─── Selected Projects (회사별 탭 + 카드) ─── */}
-        <section id="projects" className="mb-24 animate-fade-in-up delay-200 scroll-mt-24">
-          <ProjectGrid projects={projects} />
-        </section>
-
-        {/* ─── Project Details ─── */}
-        <section className="mb-24">
-          <div className="border-t border-neutral-200 pt-20">
-            {projects.map((project, i) => (
-              <ProjectSection key={project.id} project={project} index={i} />
-            ))}
-          </div>
-        </section>
+        {/* ─── Projects (회사별 탭으로 카드 + 상세 함께 필터) ─── */}
+        <ProjectsExplorer projects={projects} />
 
         {/* ─── Closing CTA (탭: 소개 · 연락처 · 감사) ─── */}
         <section className="border-t border-zinc-200 pt-16 pb-8">

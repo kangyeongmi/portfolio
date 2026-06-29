@@ -66,7 +66,6 @@ export default function OpenAIHero({ projects }: OpenAIHeroProps) {
               style={{
                 fontSize: "clamp(1rem, 2.2vw, 1.5rem)",
                 letterSpacing: "-0.01em",
-                textShadow: "0 1px 16px rgba(40,28,0,0.3)",
               }}
             >
               Product Designer
@@ -80,7 +79,7 @@ export default function OpenAIHero({ projects }: OpenAIHeroProps) {
             type="button"
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
-            className="flex items-center gap-2 rounded-[12px] bg-[#f6f3ec] px-4 py-2.5 shadow-[0px_2px_6px_0px_rgba(77,64,26,0.12)] transition-transform active:scale-[0.98]"
+            className="flex items-center gap-2 rounded-[12px] bg-[#f6f3ec] px-4 py-2.5 transition-transform active:scale-[0.98]"
           >
             <span className="text-[15px] font-medium text-[#21211f]">kangyeongmi</span>
             <ChevronDown
@@ -91,7 +90,7 @@ export default function OpenAIHero({ projects }: OpenAIHeroProps) {
 
           {/* 드롭다운 패널 */}
           {open && (
-            <div className="mt-2 w-[280px] overflow-hidden rounded-[22px] bg-[#f7f4ed] shadow-[0px_12px_32px_0px_rgba(77,64,26,0.18)] md:absolute md:right-0 md:top-full">
+            <div className="mt-2 w-[280px] overflow-hidden rounded-[22px] bg-[#f7f4ed] md:absolute md:right-0 md:top-full">
               {/* header */}
               <div className="flex items-center px-5 pt-4 pb-3">
                 <span className="text-[14px] font-medium text-[#8c8c85]">Projects</span>

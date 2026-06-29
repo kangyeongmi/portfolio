@@ -1,6 +1,6 @@
 export const portfolioData = {
   hero: {
-    headline: "반갑습니다. 복잡한 제품을 더 쉽게 만드는 Product Designer 강영미입니다.",
+    headline: "반갑습니다. 복잡한 제품을 더 쉽게 만드는 강영미입니다.",
     subHeadline:
       "디지털 제품·업무 흐름·대시보드·관리자 도구·AI 기능을 설계하며, 문제 정의부터 정보 구조·인터페이스·디자인 시스템, PO/PM·엔지니어 협업까지 함께합니다. AI 윤리와 Human-AI Interaction, 업무 자동화에 관심이 많습니다.",
     strengths: [
