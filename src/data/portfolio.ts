@@ -302,7 +302,7 @@ export const portfolioData = {
       title: "Caddie App Tablet UX",
       role: "Product Designer",
       period: "2021.10 ~ 2023.06",
-      company: "골프존 / 골프존씨엠",
+      company: "골프존",
       platform: "Android Tablet, Web Admin",
       users: "골프장 캐디 및 관제 운영자",
       summary: "강한 햇빛 아래에서도 실수를 줄이고 조작하기 쉬운 태블릿 화면을 만들었습니다.",
