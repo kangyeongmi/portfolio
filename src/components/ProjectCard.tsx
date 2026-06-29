@@ -17,14 +17,14 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       {/* 상단 중앙 글로우 (프로젝트별 그라데이션 색 유지) */}
       <span
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-0 h-[150px] w-[260px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-55 blur-[50px]"
+        className="pointer-events-none absolute left-1/2 top-0 h-[190px] w-[340px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-[0.12] blur-[64px]"
         style={{ backgroundImage: `linear-gradient(135deg, ${c1}, ${c2})` }}
       />
 
       <h3 className="relative text-[17px] font-bold leading-snug text-[#14141a]">
         {project.title}
       </h3>
-      <p className="relative mt-2 flex-1 text-[13px] leading-relaxed text-[#8c8c99]">
+      <p className="relative mt-2 flex-1 text-[13px] leading-relaxed text-[#909090]">
         {project.summary}
       </p>
       <span className="relative mt-5 block rounded-[12px] bg-[#121212] py-3 text-[14px] font-medium text-white transition-colors group-hover:bg-black">
