@@ -27,7 +27,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       <p className="relative mt-2 flex-1 text-[13px] leading-relaxed text-[#909090]">
         {project.summary}
       </p>
-      <span className="relative mt-5 block rounded-[12px] bg-[#121212] py-3 text-[14px] font-medium text-white transition-colors group-hover:bg-black">
+      <span className="relative mt-5 flex h-9 items-center justify-center rounded-[10px] bg-[#121212] text-[13px] font-medium text-white transition-colors group-hover:bg-black">
         자세히 보기
       </span>
     </a>
