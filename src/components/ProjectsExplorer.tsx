@@ -16,7 +16,7 @@ const TABS = [
 function orgOf(company: string): string {
   if (company.includes("블룸")) return "BlumnAI";
   if (company.includes("골프존")) return "Golfzon";
-  if (company.includes("Voice") || company.includes("브이씨")) return "VC";
+  if (company.includes("VC") || company.includes("Voice") || company.includes("브이씨")) return "VC";
   return "Other";
 }
 

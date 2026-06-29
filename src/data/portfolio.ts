@@ -31,28 +31,6 @@ export const portfolioData = {
       },
     ],
   },
-  recruiterSummary: [
-    {
-      title: "현장 상황을 고려한 설계로 실수를 줄여요",
-      description: "야외나 흔들리는 차 안에서도 실수 없이 정보를 확인하고 바로 움직일 수 있도록 조작 편의성을 극대화한 화면을 만들었습니다.",
-      project: "모빌리티 및 기기",
-    },
-    {
-      title: "사용자 역할 중심으로 복잡한 흐름을 정리해요",
-      description: "방대한 데이터와 기능을 사용자 역할별 행동 단위로 재구성하여 복잡한 업무 흐름에서도 길을 잃지 않게 돕습니다.",
-      project: "복잡한 정보 구조",
-    },
-    {
-      title: "행동을 이끄는 데이터 시각화 규칙을 설계해요",
-      description: "단순 수치 나열을 넘어, 관리자가 실시간 상황을 즉시 판단하고 다음 행동을 결정하게 돕는 대시보드 규칙을 세웁니다.",
-      project: "데이터 시각화",
-    },
-    {
-      title: "AI 자동 검증으로 리뷰 시간을 줄이고 품질을 높여요",
-      description: "수동 리뷰의 실수와 지연 문제를 해결하기 위해 디자인 원칙을 학습시킨 AI 크리틱 프롬프트를 설계하여 자동 검증 체계를 마련했습니다.",
-      project: "시스템 및 생산성",
-    },
-  ],
   projects: [
     {
       id: "p09",
@@ -130,7 +108,7 @@ export const portfolioData = {
       tags: ["모바일 UX", "인터랙션", "B2C 리뉴얼"],
       problem: "채팅 UI가 오래되어 브랜드 이미지를 깎고 있었고, 모바일에서 한 손으로 조작하기 불편했습니다.",
       strategy: "부드러운 움직임을 넣고 한 손으로 누르기 쉬운 위치에 주요 버튼을 배치했습니다.",
-      ownership: "리뉴얼 후에 사용자가 중간에 나가는 비율을 줄이고 긍정적인 피드백을 받았습니다.",
+      ownership: "리뉴얼 후 사용 흐름이 매끄러워졌다는 긍정적인 피드백을 받았습니다.",
       images: [
         "/images/portfolio/happytalk_enduser_mobile.png",
         "/images/portfolio/happytalk_enduser_web.png",
@@ -264,7 +242,7 @@ export const portfolioData = {
     },
     {
       id: "p06",
-      title: "Design system 자동화 프로세스 구현",
+      title: "Design System Automation",
       role: "Product Designer",
       period: "2024.07 ~ 2025.05",
       company: "블룸에이아이",
@@ -289,7 +267,7 @@ export const portfolioData = {
       tags: ["AI 지식 관리", "정보 구조화", "SaaS UX"],
       problem: "방대한 매뉴얼을 일일이 찾아야 하는 상담원의 불편함과 답변이 달라지는 문제를 해결하려 했습니다.",
       strategy: "지식 데이터의 가공과 학습 상태를 한눈에 관리하는 대시보드를 구축했습니다.",
-      ownership: "상담원이 지식을 찾는 시간을 줄여 운영 효율을 40% 이상 높였습니다.",
+      ownership: "상담원이 지식을 찾는 시간을 줄여 운영 효율을 높였습니다.",
       images: [
         "/images/portfolio/happytalk_ai_kb_1.png",
         "/images/portfolio/happytalk_ai_kb_2.png",
@@ -309,7 +287,7 @@ export const portfolioData = {
       tags: ["현장 사용성", "특수 환경", "조작 편의성"],
       problem: "강한 햇빛과 카트 진동 때문에 화면을 보기 어렵고 무전 중심의 소통으로 경기가 지연되는 문제가 있었습니다.",
       strategy: "정보는 48pt 이상으로 크게 표시하고, 버튼을 실제 크기보다 120% 넓게 설정해 실수로 잘못 누르는 경우를 줄였습니다.",
-      ownership: "현장 테스트를 거쳐 야외에서 쓰기 편한 기준을 세우고 경기 지연율을 낮췄습니다.",
+      ownership: "현장 테스트를 거쳐 야외에서 쓰기 편한 기준을 세우고, 경기 진행이 매끄러워지도록 개선했습니다.",
       images: [
         "/images/portfolio/caddie_app_1.png",
         "/images/portfolio/caddie_app_2.png",
@@ -341,14 +319,14 @@ export const portfolioData = {
       title: "Voice Caddie Device UX",
       role: "GUI / Product Designer",
       period: "2019.09 ~ 2021.09",
-      company: "Voice Caddie",
+      company: "주식회사 VC",
       platform: "Smart Watch · Hand Device · Native App",
       users: "필드에서 기기와 앱을 함께 쓰는 골퍼",
-      summary: "스마트워치·핸드 디바이스 GUI부터 네이티브 골프 앱과 인터랙션 모션까지, 브이씨의 디바이스·앱 제품 경험을 두루 설계했습니다.",
+      summary: "스마트워치·핸드 디바이스 GUI부터 네이티브 골프 앱과 인터랙션 모션까지, VC의 디바이스·앱 제품 경험을 두루 설계했습니다.",
       tags: ["기기 GUI", "네이티브 앱", "인터랙션 모션"],
       problem: "스마트워치(T7·T8·T9)와 핸드 디바이스, 여러 골프 앱에 걸쳐 화면이 분산돼, 작은 화면 가독성과 일관된 사용 경험을 확보하기 어려웠습니다.",
       strategy: "워치에는 핵심 거리 데이터만 남기고 상세는 앱으로 이관했고, 제품군 전반에 일관된 GUI 가이드와 Lottie 기반 인터랙션 모션을 정립했습니다. MySwingCaddie·MyVoiceCaddie 네이티브 앱을 메인 디자인·출시하고 iOS/Android 가이드·에셋을 관리했으며, 야디지북 핸드 디바이스 GUI와 50만 대 규모 워치 양산 흐름까지 담당했습니다.",
-      ownership: "50만 대 규모 스마트워치 디자인 기준을 세우고, 앱 출시·가이드 운영·양산까지 브이씨의 디바이스·앱 전반을 주도했습니다.",
+      ownership: "50만 대 규모 스마트워치 디자인 기준을 세우고, 앱 출시·가이드 운영·양산까지 VC의 디바이스·앱 전반을 주도했습니다.",
       images: [
         "/images/portfolio/voice_caddie_watch_1.png",
         "/images/portfolio/voice_caddie_app_1.png",
@@ -406,49 +384,9 @@ export const portfolioData = {
       ],
     },
   ],
-  career: [
-    {
-      company: "블룸에이아이",
-      period: "2024.07 - 재직 중",
-      role: "Product Designer / UXUI Designer",
-      description: "해피톡·콜브릿지·헤이데어 Product Design 및 AI 기능 UX 설계. 대시보드·통계·온보딩·Admin 등 핵심 화면 UX 재설계, 차세대 상담 솔루션 네오 해피톡 R&D 방향성 연구 주도, 태스크 플로우 신규 기획, shadcn/ui 기반 UI 전환, 디자인 시스템·협업 프로세스 정비 및 AI 크리틱 프로세스 도입.",
-    },
-    {
-      company: "바른컴퍼니",
-      period: "2024.02 - 2024.06",
-      role: "UXUI Designer / Web Designer",
-      description: "웹서비스 리디자인 및 운영, 디자인 시스템 초기 구축 참여. 브랜드 톤과 웹 UI 구조 개선.",
-    },
-    {
-      company: "골프존씨엠",
-      period: "2023.02 - 2023.06",
-      role: "Product Designer / UXUI Designer",
-      description: "Caddie App Tablet Android 및 Admin Web 운영 디자인, 가이드 관리, QA, UT 진행.",
-    },
-    {
-      company: "골프존",
-      period: "2021.10 - 2023.02",
-      role: "Product Designer / UI Designer",
-      description: "Caddie App Tablet Native UX/UI 기획 및 디자인 시스템 구축. 골프존앨범 App MVP 운영 및 GA 데이터 기반 리뉴얼 수행.",
-    },
-    {
-      company: "브이씨 (Voice Caddie)",
-      period: "2019.09 - 2021.09",
-      role: "GUI Designer / Product Designer",
-      description: "스마트워치(T7, T8, T9) GUI 메인 디자인 및 가이드 배포. MySwingCaddie, MyVoiceCaddie 앱 메인 디자인 및 Lottie 기반 인터랙션 모션 제작.",
-    },
-    {
-      company: "알마로꼬",
-      period: "2018.04 - 2019.04",
-      role: "Brand / Graphic Designer",
-      description: "Castelbajac, Lecoqsportif 등 오프라인 프로모션 기획/디자인 및 공간 브랜딩 수행.",
-    },
-  ],
   contact: {
     email: "ymkwith@gmail.com",
     phone: "010-2328-1916",
-    figma:
-      "https://www.figma.com/file/bNqLd22t01eB5L63r2YyXF/Untitled?type=design&node-id=0%3A1&mode=design&t=h2p9V2dYd4CgT235-1",
   },
 };
 
@@ -464,5 +402,3 @@ export type Project = (typeof portfolioData.projects)[number] & {
   images?: string[];
   caseStudy?: CaseStudy;
 };
-export type RecruiterSummaryItem = (typeof portfolioData.recruiterSummary)[number];
-export type CareerItem = (typeof portfolioData.career)[number];
