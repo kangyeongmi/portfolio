@@ -31,16 +31,16 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           style={{ backgroundImage: `linear-gradient(135deg, ${c1}, ${c2})` }}
         />
 
-        <CardHeader className="relative flex-1">
+        <CardHeader className="relative">
           <CardTitle className="text-[16px] font-bold leading-snug text-[#14141a]">
             {project.title}
           </CardTitle>
-          <CardDescription className="text-[13px] leading-relaxed text-[#909090]">
+          <CardDescription className="text-[13px] leading-relaxed text-zinc-500">
             {project.summary}
           </CardDescription>
         </CardHeader>
 
-        <CardFooter className="relative bg-transparent">
+        <CardFooter className="relative mt-auto bg-transparent">
           <span
             className={cn(
               buttonVariants({ variant: "secondary", size: "lg" }),
