@@ -1,21 +1,16 @@
 import React from "react";
-import { projectGradientCss } from "@/lib/projectGradients";
 
 interface ProjectHeaderProps {
   num: string;
   title: string;
-  index: number;
 }
 
-export default function ProjectHeader({ num, title, index }: ProjectHeaderProps) {
+export default function ProjectHeader({ num, title }: ProjectHeaderProps) {
   return (
     <div className="flex items-center gap-3 mb-4">
       <span
-        className="tabular-nums font-bold text-white shrink-0 px-2 py-1 rounded-[6px]"
-        style={{
-          fontSize: "var(--text-micro)",
-          backgroundImage: projectGradientCss(index),
-        }}
+        className="tabular-nums font-bold text-zinc-500 bg-zinc-100 shrink-0 px-2 py-1 rounded-[6px]"
+        style={{ fontSize: "var(--text-micro)" }}
       >
         {num}
       </span>

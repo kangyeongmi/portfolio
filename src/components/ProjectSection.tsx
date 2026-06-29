@@ -27,7 +27,7 @@ export default function ProjectSection({
     >
       {/* ── Header ── */}
       <div className="mb-10">
-        <ProjectHeader num={num} title={project.title} index={index} />
+        <ProjectHeader num={num} title={project.title} />
 
         <p
           className="text-zinc-700 mb-5"
