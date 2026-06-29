@@ -102,15 +102,6 @@ export default function OpenAIPortfolio() {
 
         {/* ─── Selected Projects (회사별 탭 + 카드) ─── */}
         <section id="projects" className="mb-24 animate-fade-in-up delay-200 scroll-mt-24">
-          <p
-            className="text-zinc-500 mb-5"
-            style={{
-              fontSize: "var(--text-caption)",
-              letterSpacing: "var(--tracking-caption)",
-            }}
-          >
-            B2B SaaS · AI · 데이터 · 디자인 시스템 전반의 대표 작업
-          </p>
           <ProjectGrid projects={projects} />
         </section>
 
