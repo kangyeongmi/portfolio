@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { portfolioData } from "@/data/portfolio";
 import OpenAIHero from "@/components/OpenAIHero";
-import ProjectCard from "@/components/ProjectCard";
+import ProjectGrid from "@/components/ProjectGrid";
 import ProjectSection from "@/components/ProjectSection";
 import ProjectNav from "@/components/ProjectNav";
 import ClosingCTA from "@/components/ClosingCTA";
@@ -100,20 +100,10 @@ export default function OpenAIPortfolio() {
           </div>
         </section>
 
-        {/* ─── Selected Projects (Cards) ─── */}
+        {/* ─── Selected Projects (회사별 탭 + 카드) ─── */}
         <section id="projects" className="mb-24 animate-fade-in-up delay-200 scroll-mt-24">
-          <h2
-            className="font-bold text-zinc-900 mb-2"
-            style={{
-              fontSize: "var(--text-section)",
-              lineHeight: "var(--leading-section)",
-              letterSpacing: "var(--tracking-title)",
-            }}
-          >
-            Projects
-          </h2>
           <p
-            className="text-zinc-500 mb-8"
+            className="text-zinc-500 mb-5"
             style={{
               fontSize: "var(--text-caption)",
               letterSpacing: "var(--tracking-caption)",
@@ -121,11 +111,7 @@ export default function OpenAIPortfolio() {
           >
             B2B SaaS · AI · 데이터 · 디자인 시스템 전반의 대표 작업
           </p>
-          <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
-            {projects.map((project, i) => (
-              <ProjectCard key={project.id} project={project} index={i} />
-            ))}
-          </div>
+          <ProjectGrid projects={projects} />
         </section>
 
         {/* ─── Project Details ─── */}
