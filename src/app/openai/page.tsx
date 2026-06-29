@@ -95,7 +95,7 @@ export default function OpenAIPortfolio() {
               href="/resume"
               className="inline-flex items-center gap-1.5 rounded-[8px] bg-zinc-900 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-zinc-800"
             >
-              이력서 · 경력기술서 보기 →
+              이력서 · 경력기술서 보기
             </a>
           </div>
         </section>
