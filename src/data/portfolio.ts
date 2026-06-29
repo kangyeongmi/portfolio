@@ -326,7 +326,7 @@ export const portfolioData = {
       tags: ["기기 GUI", "네이티브 앱", "인터랙션 모션"],
       problem: "스마트워치(T7·T8·T9)와 핸드 디바이스, 여러 골프 앱에 걸쳐 화면이 분산돼, 작은 화면 가독성과 일관된 사용 경험을 확보하기 어려웠습니다.",
       strategy: "워치에는 핵심 거리 데이터만 남기고 상세는 앱으로 이관했고, 제품군 전반에 일관된 GUI 가이드와 Lottie 기반 인터랙션 모션을 정립했습니다. MySwingCaddie·MyVoiceCaddie 네이티브 앱을 메인 디자인·출시하고 iOS/Android 가이드·에셋을 관리했으며, 야디지북 핸드 디바이스 GUI와 1년 싸이클의 제품 양산 흐름을 경험했습니다.",
-      ownership: "50만 대 규모 스마트워치 디자인 기준을 세우고, 앱 출시·가이드 운영·양산까지 VC의 디바이스·앱 전반을 주도했습니다.",
+      ownership: "스마트워치 GUI 디자인 기준을 세우고, 앱 출시·가이드 운영부터 제품 양산까지 VC의 디바이스·앱 제작 전반을 경험했습니다.",
       images: [
         "/images/portfolio/voice_caddie_watch_1.png",
         "/images/portfolio/voice_caddie_app_1.png",
