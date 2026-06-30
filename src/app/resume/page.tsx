@@ -9,9 +9,9 @@ export const metadata = {
   description: "강영미 Product Designer 이력서 및 경력기술서",
 };
 
-// 영문 → Inter, 한글 → Apple SD Gothic Neo
+// 영문 → Inter, 한글 → SUIT
 const FONT_STACK =
-  "'Inter', 'Apple SD Gothic Neo', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif";
+  "'Inter', 'SUIT', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Segoe UI', 'Malgun Gothic', sans-serif";
 
 export default function ResumePage() {
   const md = fs.readFileSync(

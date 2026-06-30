@@ -6,9 +6,9 @@ import ProjectNav from "@/components/ProjectNav";
 import ClosingCTA from "@/components/ClosingCTA";
 import { Badge } from "@/components/ui/badge";
 
-// 영문 → Inter, 한글 → Apple SD Gothic Neo (이 페이지 한정)
+// 영문 → Inter, 한글 → SUIT (이 페이지 한정)
 const FONT_STACK =
-  "'Inter', 'Apple SD Gothic Neo', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif";
+  "'Inter', 'SUIT', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Segoe UI', 'Malgun Gothic', sans-serif";
 
 export default function OpenAIPortfolio() {
   const { hero, projects, contact } = portfolioData;

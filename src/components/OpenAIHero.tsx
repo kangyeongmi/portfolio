@@ -8,9 +8,9 @@ interface OpenAIHeroProps {
   projects: Project[];
 }
 
-// 영문 → Inter, 한글 → Apple SD Gothic Neo 매핑
+// 영문 → Inter, 한글 → SUIT 매핑
 const FONT_STACK =
-  "'Inter', 'Apple SD Gothic Neo', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif";
+  "'Inter', 'SUIT', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Segoe UI', 'Malgun Gothic', sans-serif";
 
 // 커버 패널에 노출할 대표작 (상위 6 = 딥다이브 3 + 강한 케이스)
 const SELECTED_IDS = ["p09", "p11", "p07", "p04", "p06", "p10"];
