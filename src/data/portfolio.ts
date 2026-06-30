@@ -146,6 +146,11 @@ export const portfolioData = {
         ],
         gallery: [
           {
+            src: "/images/portfolio/enduser_case_overview.png",
+            caption:
+              "엔드유저 리뉴얼 — 컴포넌트·채팅 카드·홈 버튼부터 설정 플로우까지 개선 케이스를 한 화면에 정리",
+          },
+          {
             src: "/images/portfolio/enduser_home.png",
             caption:
               "To-Be · 홈 — 인사·입력창과 '다른 방법으로'(카카오·메시지·전화)를 노출, 홈에서 바로 채팅 문의로 유입",
