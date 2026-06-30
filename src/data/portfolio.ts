@@ -288,7 +288,10 @@ export const portfolioData = {
       problem: "콜브릿지와 해피톡의 SNB가 서로 달랐고, 키컬러가 화면 곳곳에 과하게 쓰여 정작 중요한 버튼의 위계와 액션이 잘 보이지 않았습니다. 상담 데이터도 기록에 그쳐 운영 인사이트로 이어지지 않았습니다.",
       strategy: "콜브릿지·해피톡 SNB를 하나로 맞추고, 키컬러 사용 범위를 줄여 버튼 위계와 화면 내 액션이 또렷이 보이도록 정리했습니다. AI가 분석한 상담 주제·반복 이슈는 운영 리스크와 개선 포인트 중심의 대시보드로 보여줬습니다.",
       ownership: "콜브릿지 화면의 SNB와 비주얼 위계를 정리하고, 운영자가 데이터를 보고 다음 판단을 내릴 수 있는 분석 대시보드를 만들었습니다.",
-      images: [],
+      images: [
+        "/images/portfolio/callbridge_snb_settings.png",
+        "/images/portfolio/callbridge_ai_agent.png",
+      ],
     },
     {
       id: "p01",
