@@ -13,7 +13,7 @@ export default function ProjectNav({ projects }: ProjectNavProps) {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // 헤더 하단 라인을 지난 '가장 마지막' 상세 섹션을 active로 (지나기 전엔 null → "Projects")
+    // 헤더 하단 라인을 지난 '가장 마지막' 상세 섹션을 active로 (지나기 전엔 null → "Resume" 링크)
     const handleScroll = () => {
       const threshold = 120; // 스티키 헤더 높이 + 여유
       let current: string | null = null;
@@ -43,9 +43,18 @@ export default function ProjectNav({ projects }: ProjectNavProps) {
     >
       <div className="max-w-[720px] mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3 overflow-hidden">
-          <span className="font-semibold text-zinc-900 truncate text-sm">
-            {activeProject ? activeProject.title : "Projects"}
-          </span>
+          {activeProject ? (
+            <span className="font-semibold text-zinc-900 truncate text-sm">
+              {activeProject.title}
+            </span>
+          ) : (
+            <a
+              href="/resume"
+              className="font-semibold text-zinc-900 truncate text-sm hover:text-zinc-600 transition-colors"
+            >
+              Resume
+            </a>
+          )}
         </div>
         <a
           href="#"
